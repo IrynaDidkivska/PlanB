@@ -101,3 +101,68 @@
     }
   }
 }
+
+/* Bg-About */
+
+.bg-laser::before,
+.bg-laser-isOpen::before,
+.bg-electro::before,
+.bg-electro-isOpen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 12px;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+}
+
+.bg-laser::before {
+  background: linear-gradient(
+      269deg,
+      rgba(32, 32, 32, 0.8) 0.99%,
+      rgba(0, 0, 0, 0) 33.32%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%),
+    url('../../modules/AboutUs/img/bg-laser.jpg');
+  background-position: 0px -43.722px;
+  background-size: 100% 177.908%;
+}
+
+.bg-laser-isOpen::before {
+  background: linear-gradient(
+      269deg,
+      rgba(32, 32, 32, 0.8) 0.99%,
+      rgba(0, 0, 0, 0) 33.32%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%),
+    url('../../modules/AboutUs/img/bg-laser.jpg');
+  background-position: -139.339px -179.386px;
+  background-size: 138.792% 125.199%;
+}
+
+.bg-electro::before {
+  background: linear-gradient(
+      269deg,
+      rgba(32, 32, 32, 0.8) 0.99%,
+      rgba(0, 0, 0, 0) 33.32%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%),
+    url('../../modules/AboutUs/img/bg-electro.jpeg');
+  background-position: -0.507px -0.615px;
+  background-size: 100% 195.053%;
+}
+
+.bg-electro-isOpen::before {
+  background: linear-gradient(
+      269deg,
+      rgba(32, 32, 32, 0.8) 0.99%,
+      rgba(0, 0, 0, 0) 33.32%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%),
+    url('../../modules/AboutUs/img/bg-electro.jpeg');
+  background-position: -17.217px 0px;
+  background-size: 138.422% 126.823%;
+}

@@ -3,10 +3,12 @@ import { Container, Section, SectionTitle } from '@/components';
 import React from 'react';
 import { Principles } from './components/Principles';
 import { aboutData } from './helpers/data';
+import { Laser } from './components/Laser';
+import { Electro } from './components/Electro';
 
 const AboutUs = () => {
   return (
-    <Section className="bg-neutral-800 text-stone-50">
+    <Section className="pb-[120px] bg-neutral-800 text-stone-50">
       <Container>
         <SectionTitle className="mb-12 md:mb-[72px]">Про нас</SectionTitle>
         <p
@@ -17,13 +19,29 @@ const AboutUs = () => {
           вас гладка та доглянута шкіра. Наша студія створена, щоб ви відчували
           себе комфортно та впевнено, отримуючи найвищу якість послуг.
         </p>
-        {aboutData.map((item, index) =>
-          item.principles ? (
-            <li key={index}>
-              <Principles items={item.principles} />
-            </li>
-          ) : null
-        )}
+        <ul className="flex flex-col justify-center gap-20 md:gap-24">
+          {aboutData.map((item, index) =>
+            item.principles ? (
+              <li key={index} className="md:ml-auto md:max-w-[523px]">
+                <Principles items={item.principles} />
+              </li>
+            ) : null
+          )}
+          {aboutData.map((item, index) =>
+            item.laser ? (
+              <li key={index}>
+                <Laser items={item.laser} />
+              </li>
+            ) : null
+          )}
+          {aboutData.map((item, index) =>
+            item.electro ? (
+              <li key={index}>
+                <Electro items={item.electro} />
+              </li>
+            ) : null
+          )}
+        </ul>
       </Container>
     </Section>
   );
