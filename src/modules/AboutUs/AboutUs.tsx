@@ -29,7 +29,7 @@ const AboutUs = () => {
           )}
           {aboutData.map((item, index) =>
             item.laser ? (
-              <li key={index}>
+              <li key={index} className="max-h-fit ">
                 <Laser items={item.laser} />
               </li>
             ) : null

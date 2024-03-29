@@ -130,6 +130,38 @@
   background-position: 0px -43.722px;
   background-size: 100% 177.908%;
 }
+@media (min-width: 768px) {
+  .bg-laser::before {
+    top: 70.5px;
+    left: 179px;
+    height: 487px;
+    background: linear-gradient(
+        270deg,
+        rgba(32, 32, 32, 0.8) 0.25%,
+        rgba(0, 0, 0, 0) 42.45%
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%),
+      url('../../modules/AboutUs/img/bg-laser.jpg');
+    background-position: -69px -106.021px;
+    background-size: 113.143% 159.807%;
+  }
+}
+@media (min-width: 1440px) {
+  .bg-laser::before {
+    top: 20px;
+    left: 470px;
+    height: 560px;
+    background: linear-gradient(
+        269deg,
+        rgba(32, 32, 32, 0.8) -7.06%,
+        rgba(0, 0, 0, 0) 31.88%
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%),
+      url('../../modules/AboutUs/img/bg-laser.jpg');
+    background-position: 0px -121.913px;
+    background-size: 100% 159.807%;
+  }
+}
 
 .bg-laser-isOpen::before {
   background: linear-gradient(

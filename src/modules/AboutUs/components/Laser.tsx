@@ -19,7 +19,7 @@ interface LaserProps {
 
 export const Laser: React.FC<LaserProps> = ({ items }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { isOnMobile, isOnTablet } = useMediaQueries();
+  const { isOnMobile } = useMediaQueries();
   const toggleButton = () => setIsOpen(prev => !prev);
 
   return (
@@ -29,16 +29,17 @@ export const Laser: React.FC<LaserProps> = ({ items }) => {
           `relative 
        ${
          isOpen
-           ? 'w-[568px] h-[824px] bg-laser-isOpen'
-           : 'pt-[103px] w-[304px] h-[256px] bg-laser'
+           ? 'sm:w-[568px] sm:h-[824px] bg-laser-isOpen  '
+           : 'sm:pt-[103px] sm:w-[304px] sm:h-[256px] bg-laser md:w-full md:h-[487px] xl:h-[560px]'
        }
+      ${!isOnMobile && 'sm:pt-0 bg-laser'}
         `
         )}
       >
         <Subtitle className="relative mb-3 leading-6 md:text-xl md:leading-8">
           {items.title}
         </Subtitle>
-        <ul className="relative flex flex-col justify-center items-center gap-4 w-[289px]">
+        <ul className="relative flex flex-col justify-center items-center gap-4 w-full max-w-[289px] md:max-w-[512px] xl:max-w-[566px] ">
           {items.details.map((detail, index) => (
             <li
               key={index}

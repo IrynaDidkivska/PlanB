@@ -30,6 +30,7 @@ export const Electro: React.FC<ElectroProps> = ({ items }) => {
            ? 'w-[304px] h-[384px] bg-electro-isOpen'
            : 'pt-[106.5px] w-[304px] h-[233.5px] bg-electro'
        }
+       ${isOnTablet && 'w-[568px] bg-red'}
         `
         )}
       >
