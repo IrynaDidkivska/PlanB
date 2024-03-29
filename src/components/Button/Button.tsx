@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 import useVisibility from '@/hooks/useVisibility';
 import { Modal } from '..';
-import { Form } from '@/modules';
+import Form from '@/modules/Form/Form';
 
 const Button: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
