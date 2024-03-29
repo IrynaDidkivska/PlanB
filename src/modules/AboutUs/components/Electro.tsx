@@ -1,10 +1,10 @@
 'use client';
 
-import { Subtitle } from '@/components';
 import React, { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { ToggleButton } from './ToggleButton';
 import useMediaQueries from '@/hooks/useMediaQueries';
+import { Subtitle } from '@/components';
+import { ToggleButton } from './ToggleButton';
 
 interface ElectroProps {
   items: {
@@ -17,7 +17,7 @@ interface ElectroProps {
 
 export const Electro: React.FC<ElectroProps> = ({ items }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { isOnMobile, isOnTablet } = useMediaQueries();
+  const { isOnMobile } = useMediaQueries();
   const toggleButton = () => setIsOpen(prev => !prev);
 
   return (
@@ -28,16 +28,16 @@ export const Electro: React.FC<ElectroProps> = ({ items }) => {
        ${
          isOpen
            ? 'w-[304px] h-[384px] bg-electro-isOpen'
-           : 'pt-[106.5px] w-[304px] h-[233.5px] bg-electro'
+           : 'sm:pt-[106.5px] sm:w-[304px] sm:h-[233.5px] bg-electro md:w-full md:h-[487px] xl:h-[560px]'
        }
-       ${isOnTablet && 'w-[568px] bg-red'}
+       ${!isOnMobile && 'sm:pt-0 bg-electro'}
         `
         )}
       >
-        <Subtitle className="relative mb-3 leading-6 md:text-xl md:leading-8">
+        <Subtitle className="relative mb-3 leading-6  md:ml-[183px] md:pt-[85.5px] md:text-xl md:leading-8 xl:pt-[122px] xl:ml-[586px]">
           {items.title}
         </Subtitle>
-        <ul className="relative flex flex-col justify-center items-center gap-[14px] w-[289px]">
+        <ul className="relative flex flex-col justify-center items-center gap-[14px] w-full max:w-[289px] md:ml-[183px] md:max-w-[512px] xl:max-w-[566px] xl:ml-[586px]">
           {items.details.map((detail, index) => (
             <li
               key={index}

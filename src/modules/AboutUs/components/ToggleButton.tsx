@@ -1,7 +1,7 @@
 import React from 'react';
-import { PolygonSVG } from '../../../../public/about/PoligonSVG';
 import { twMerge } from 'tailwind-merge';
 import useMediaQueries from '@/hooks/useMediaQueries';
+import { PolygonSVG } from '../img/PoligonSVG';
 
 interface ToggleButtonProps {
   onClick: () => void;

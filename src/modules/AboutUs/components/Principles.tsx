@@ -1,11 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Subtitle } from '@/components';
-import { PolygonSVG } from '../../../../public/about/PoligonSVG';
-import { twMerge } from 'tailwind-merge';
-import { ToggleButton } from './ToggleButton';
 import useMediaQueries from '@/hooks/useMediaQueries';
+import { Subtitle } from '@/components';
+import { ToggleButton } from './ToggleButton';
 import useToggle from '../helpers/useToggle';
 
 interface PrinciplesProps {

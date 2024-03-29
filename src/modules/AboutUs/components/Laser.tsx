@@ -1,10 +1,10 @@
 'use client';
 
-import { Subtitle } from '@/components';
 import React, { useState } from 'react';
-import { ToggleButton } from './ToggleButton';
 import { twMerge } from 'tailwind-merge';
 import useMediaQueries from '@/hooks/useMediaQueries';
+import { Subtitle } from '@/components';
+import { ToggleButton } from './ToggleButton';
 
 interface LaserProps {
   items: {
@@ -29,7 +29,7 @@ export const Laser: React.FC<LaserProps> = ({ items }) => {
           `relative 
        ${
          isOpen
-           ? 'sm:w-[568px] sm:h-[824px] bg-laser-isOpen  '
+           ? 'sm:w-[304px] sm:h-[824px] sm:overflow-hidden bg-laser-isOpen  '
            : 'sm:pt-[103px] sm:w-[304px] sm:h-[256px] bg-laser md:w-full md:h-[487px] xl:h-[560px]'
        }
       ${!isOnMobile && 'sm:pt-0 bg-laser'}

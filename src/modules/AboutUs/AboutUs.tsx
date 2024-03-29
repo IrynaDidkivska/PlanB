@@ -1,10 +1,8 @@
-import { Container, Section, SectionTitle } from '@/components';
-
 import React from 'react';
-import { Principles } from './components/Principles';
+
+import { Container, Section, SectionTitle } from '@/components';
+import { Principles, Laser, Electro } from './components/index';
 import { aboutData } from './helpers/data';
-import { Laser } from './components/Laser';
-import { Electro } from './components/Electro';
 
 const AboutUs = () => {
   return (
@@ -22,21 +20,24 @@ const AboutUs = () => {
         <ul className="flex flex-col justify-center gap-20 md:gap-24">
           {aboutData.map((item, index) =>
             item.principles ? (
-              <li key={index} className="md:ml-auto md:max-w-[523px]">
+              <li
+                key={index}
+                className="md:ml-auto md:max-w-[523px] xl:max-w-[566px]"
+              >
                 <Principles items={item.principles} />
               </li>
             ) : null
           )}
           {aboutData.map((item, index) =>
             item.laser ? (
-              <li key={index} className="max-h-fit ">
+              <li key={index} className="md:min-h-[628px]">
                 <Laser items={item.laser} />
               </li>
             ) : null
           )}
           {aboutData.map((item, index) =>
             item.electro ? (
-              <li key={index}>
+              <li key={index} className="md:min-h-[487px] ">
                 <Electro items={item.electro} />
               </li>
             ) : null
