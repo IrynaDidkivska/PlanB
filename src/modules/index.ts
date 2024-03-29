@@ -8,3 +8,4 @@ export { default as Feedback } from './Feedback/Feedback';
 export { default as Location } from './Location/Location';
 export { default as Footer } from './Footer/Footer';
 export { default as Slider } from './Slider/Slider';
+export { default as Form } from './Form/Form';
