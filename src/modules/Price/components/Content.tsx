@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import dulya from '../img/dulya.png';
-import monkey from '../img/monkey.jpeg';
 import eye from '../img/eye.png';
 
 type ContentProps = {
@@ -9,8 +7,8 @@ type ContentProps = {
 };
 
 const images = [
-  { src: dulya, alt: 'Dulya' },
-  { src: monkey, alt: 'Monkey' },
+  { src: eye, alt: 'Eye' },
+  { src: eye, alt: 'Eye' },
   { src: eye, alt: 'Eye' },
 ];
 
