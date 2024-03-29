@@ -1,8 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import useMediaQueries from '@/hooks/useMediaQueries';
+import useToggle from '../helpers/useToggle';
 import { Subtitle } from '@/components';
 import { ToggleButton } from './ToggleButton';
 
@@ -18,9 +19,8 @@ interface LaserProps {
 }
 
 export const Laser: React.FC<LaserProps> = ({ items }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const { isOnMobile } = useMediaQueries();
-  const toggleButton = () => setIsOpen(prev => !prev);
+  const [isOpen, toggleButton] = useToggle();
 
   return (
     <>
@@ -56,7 +56,7 @@ export const Laser: React.FC<LaserProps> = ({ items }) => {
           ))}
         </ul>
       </div>
-      <ToggleButton onClick={() => toggleButton()} isOpen={isOpen} />
+      <ToggleButton onClick={toggleButton} isOpen={isOpen} />
     </>
   );
 };

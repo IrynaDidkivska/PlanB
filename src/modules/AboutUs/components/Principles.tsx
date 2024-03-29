@@ -16,10 +16,8 @@ interface PrinciplesProps {
   };
 }
 export const Principles: React.FC<PrinciplesProps> = ({ items }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleButton = () => setIsOpen(prev => !prev);
   const { isOnMobile } = useMediaQueries();
-  // const [isOpen, toggleButton] = useToggle();
+  const [isOpen, toggleButton] = useToggle();
 
   return (
     <>
@@ -41,7 +39,7 @@ export const Principles: React.FC<PrinciplesProps> = ({ items }) => {
           </li>
         ))}
       </ul>
-      <ToggleButton onClick={() => toggleButton()} isOpen={isOpen} />
+      <ToggleButton onClick={toggleButton} isOpen={isOpen} />
     </>
   );
 };
