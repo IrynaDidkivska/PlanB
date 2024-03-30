@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="ua">
       <body>
-        <main className="overflow-x-hidden">
+        <main>
           {children}
           <ButtonScrollToUp />
           <Button />

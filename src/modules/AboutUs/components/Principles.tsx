@@ -32,7 +32,7 @@ export const Principles: React.FC<PrinciplesProps> = ({ items }) => {
           >
             <h3 className="text-xl font-bold">
               {detail.subtitle}
-              <span className="text-base font-medium md:text-lg md:font-normal">
+              <span className="text-base font-medium md:text-lg md:font-normal antialiased">
                 {detail.description}
               </span>
             </h3>

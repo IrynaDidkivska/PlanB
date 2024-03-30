@@ -37,18 +37,20 @@ export const Electro: React.FC<ElectroProps> = ({ items }) => {
         <Subtitle className="relative mb-3 leading-6  md:ml-[183px] md:pt-[85.5px] md:text-xl md:leading-8 xl:pt-[122px] xl:ml-[586px]">
           {items.title}
         </Subtitle>
-        <ul className="relative flex flex-col justify-center items-center gap-[14px] w-full max:w-[289px] md:ml-[183px] md:max-w-[512px] xl:max-w-[566px] xl:ml-[586px]">
+        <div className="relative flex flex-col justify-center items-center gap-[14px] w-full max:w-[289px] md:ml-[183px] md:max-w-[512px] xl:max-w-[566px] xl:ml-[586px]">
           {items.details.map((detail, index) => (
-            <li
+            <p
               key={index}
-              className={index === 0 || isOpen || !isOnMobile ? '' : 'hidden'}
+              className={
+                index === 0 || isOpen || !isOnMobile
+                  ? 'text-base font-medium md:text-lg md:font-normal'
+                  : 'hidden'
+              }
             >
-              <p className="text-base font-medium md:text-lg md:font-normal">
-                {detail.text}
-              </p>
-            </li>
+              {detail.text}
+            </p>
           ))}
-        </ul>
+        </div>
       </div>
       <ToggleButton onClick={toggleButton} isOpen={isOpen} />
     </>

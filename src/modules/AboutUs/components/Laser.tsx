@@ -39,22 +39,24 @@ export const Laser: React.FC<LaserProps> = ({ items }) => {
         <Subtitle className="relative mb-3 leading-6 md:text-xl md:leading-8">
           {items.title}
         </Subtitle>
-        <ul className="relative flex flex-col justify-center items-center gap-4 w-full max-w-[289px] md:max-w-[512px] xl:max-w-[566px] ">
+        <div className="relative flex flex-col justify-center items-center gap-4 w-full max-w-[289px] md:max-w-[512px] xl:max-w-[566px] ">
           {items.details.map((detail, index) => (
-            <li
+            <p
               key={index}
-              className={index === 0 || isOpen || !isOnMobile ? '' : 'hidden'}
+              className={
+                index === 0 || isOpen || !isOnMobile
+                  ? 'text-base font-medium md:text-lg md:font-normal'
+                  : 'hidden'
+              }
             >
-              <p className="text-base font-medium md:text-lg md:font-normal">
-                {detail.text}
-                <span className="text-base font-bold md:text-xl">
-                  {detail.boldText}
-                </span>
-                {detail.aditionalText}
-              </p>
-            </li>
+              {detail.text}
+              <span className="text-base font-bold md:text-xl">
+                {detail.boldText}
+              </span>
+              {detail.aditionalText}
+            </p>
           ))}
-        </ul>
+        </div>
       </div>
       <ToggleButton onClick={toggleButton} isOpen={isOpen} />
     </>
