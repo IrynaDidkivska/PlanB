@@ -2,14 +2,13 @@
 import React, { useState } from 'react';
 import { MobileMenu } from './components';
 import Link from 'next/link';
-import { Container, SectionTitle, Section, Logo, Modal } from '@/components';
+import { Logo, Modal } from '@/components';
 import HeaderSVG from './HeaderSVG';
-import { SpriteSVG } from '@/assets/img/SpriteSVG';
 import SocialMedia from '@/components/SocialMedia/SocialMedia';
 import useVisibility from '@/hooks/useVisibility';
-import { twMerge } from 'tailwind-merge';
 
 const HeaderFixed = () => {
+   const menu = ["Про нас", "Послуги"," Наші спеціалісти", "Ціни", "Відгуки", "Контакти"]
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const isVisible = useVisibility(50);
   const toggleModal = () => setIsOpen(prev => !prev);
@@ -32,27 +31,20 @@ const HeaderFixed = () => {
           <Logo className="w-[64px] h-[54px] md:w-[126px] md:h-[100px]" />
           <nav className="hidden xl:block">
             <ul className="flex gap-[54px] justify-between font-ttChocolates500 text-[24px] text-stone-900 leading-[111%]">
-              <Link href="/">Про нас</Link>
-              <Link href="#">Послуги</Link>
-              <Link href="#">Наші спеціалісти</Link>
-              <Link href="#">Ціни</Link>
-              <Link href="#">Відгуки</Link>
-              <Link href="#">Контакти</Link>
+              {menu.map((el, index) => (
+                <li key={index}>
+                  <Link href="/">{el}</Link>
+                </li>
+              ))}
             </ul>
           </nav>
           <div className="hidden md:w-[150px] md:block xl:w-[176px] xl-[32px]">
             <SocialMedia
               wrapperClassName="flex gap-2 flex-col"
-              textClassName=""
-              mediaClassName=""
-              mediaLinkClassName=""
               text={
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html:
-                      'Слідкуйте за <strong class="uppercase">акціями</strong> в наших соцмережах',
-                  }}
-                />
+                <>
+                  Слідкуйте за <strong className="uppercase">акціями</strong> в наших соцмережах
+                </>
               }
             />
           </div>

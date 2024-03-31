@@ -4,11 +4,9 @@ import React, { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 type SocialMediaProps = {
-  children?: ReactNode;
   wrapperClassName?: string;
   textClassName?: string;
   mediaClassName?: string;
-  linkClassName?: string;
   text?: ReactNode;
   mediaLinkClassName?: string;
 };
