@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, Section, SectionTitle } from '@/components';
 import { Principles, Laser, Electro } from './components/index';
-import { aboutData } from './helpers/data';
+import aboutData from './helpers/data.json';
 
 const AboutUs = () => {
   return (
