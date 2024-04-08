@@ -1,15 +1,11 @@
 'use client';
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// import required modules
 import { Pagination, Navigation, Mousewheel, Keyboard } from 'swiper/modules';
-import useMediaQueries from '@/hooks/useMediaQueries';
 
 import slideData from '../data/slide-data';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -18,22 +14,6 @@ import SpriteSVG from '../img/SpriteSVG';
 import { twMerge } from 'tailwind-merge';
 
 export default function App() {
-  const { isOnMobile, isOnTablet } = useMediaQueries();
-
-  let slidesPerView;
-  let spaceBetween;
-
-  if (isOnMobile) {
-    slidesPerView = 1;
-    spaceBetween = 30;
-  } else if (isOnTablet) {
-    slidesPerView = 3;
-    spaceBetween = 50;
-  } else {
-    slidesPerView = 3;
-    spaceBetween = 153;
-  }
-
   return (
     <>
       <Swiper
@@ -43,9 +23,21 @@ export default function App() {
         keyboard={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={slidesPerView}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+          1440: {
+            slidesPerView: 3,
+            spaceBetween: 153,
+          },
+        }}
         initialSlide={0}
-        spaceBetween={spaceBetween}
         navigation={{
           nextEl: '.mySwiper-button-next',
           prevEl: '.mySwiper-button-prev',
