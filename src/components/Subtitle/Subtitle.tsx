@@ -8,14 +8,14 @@ type SubtitleProps = {
 
 const Subtitle = ({ children, className }: SubtitleProps) => {
   return (
-    <div
+    <h2
       className={twMerge(
         `text-stone-50 text-xl font-bold font-ttChocolates700 uppercase leading-loose`,
         className
       )}
     >
       {children}
-    </div>
+    </h2>
   );
 };
 
