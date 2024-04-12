@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Section, SectionTitle } from '@/components';
-
 import { ServicesList } from './components/ServicesList';
 
 const Services = () => {
