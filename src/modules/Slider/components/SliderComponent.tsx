@@ -4,8 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Pagination, Navigation, Mousewheel, Keyboard } from 'swiper/modules';
 
-import slideData from '../data/slide-data';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -13,7 +11,15 @@ import 'swiper/css/pagination';
 import SpriteSVG from '../img/SpriteSVG';
 import { twMerge } from 'tailwind-merge';
 
-export default function App() {
+type Slide = {
+  description: string;
+};
+
+type SliderComponentProps = {
+  sliderData: Slide[];
+};
+
+export default function SliderComponent({ sliderData }: SliderComponentProps) {
   return (
     <>
       <Swiper
@@ -48,7 +54,7 @@ export default function App() {
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="mySwiper"
       >
-        {slideData.map((slide, index) => (
+        {sliderData.map((slide, index) => (
           <SwiperSlide key={index}>
             <div>
               <p>{slide.description}</p>
