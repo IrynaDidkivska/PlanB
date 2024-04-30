@@ -1,10 +1,10 @@
 import Contacts from '@/components/Contacts/Contacts';
 import SocialMedia from '@/components/SocialMedia/SocialMedia';
 import Link from 'next/link';
+import links from '../../assets/menuLinks.json';
 
 
 const MobileMenu = () => {
-  const menu = ["Про нас", "Послуги"," Наші спеціалісти", "Ціни", "Відгуки", "Контакти"]
   return (
     <div className="pt-[50px] px-[15px] md:px-[40px]">
       <div className="pb-[66px]">
@@ -22,9 +22,9 @@ const MobileMenu = () => {
       </div>
       <nav className="pb-[65px]">
         <ul className="flex flex-col gap-6 font-ttChocolates500 font-medium text-2xl items-start">
-          {menu.map((el, index) => (
+          {links.map((el, index) => (
               <li key={index}>
-              <Link href="/">{el}</Link>
+                <Link href={el.path}>{el.title}</Link>
               </li>
               ))
            }

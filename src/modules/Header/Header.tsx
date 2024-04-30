@@ -7,12 +7,13 @@ import HeaderSVG from './HeaderSVG';
 import SocialMedia from '@/components/SocialMedia/SocialMedia';
 import useVisibility from '@/hooks/useVisibility';
 import Contacts from '@/components/Contacts/Contacts';
+import links from './assets/menuLinks.json';
 
 const Header = () => {
-  const menu = ["Про нас", "Послуги"," Наші спеціалісти", "Ціни", "Відгуки", "Контакти"]
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const isVisible = useVisibility(50);
   const toggleModal = () => setIsOpen(prev => !prev);
+  
 
   return (
     <>
@@ -55,9 +56,9 @@ const Header = () => {
         </div>
         <nav className="max-w-[1440px] mx-auto hidden xl:block xl:pt-12">
           <ul className="flex justify-between font-ttChocolates500 text-[24px] text-stone-900 leading-[111%]">
-            {menu.map((el, index) => (
+            {links.map((el, index) => (
               <li key={index}>
-              <Link href="/">{el}</Link>
+                <Link href={el.path}>{el.title}</Link>
               </li>
               ))
            }
