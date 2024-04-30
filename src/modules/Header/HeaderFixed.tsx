@@ -6,22 +6,18 @@ import { Logo, Modal } from '@/components';
 import HeaderSVG from './HeaderSVG';
 import SocialMedia from '@/components/SocialMedia/SocialMedia';
 import useVisibility from '@/hooks/useVisibility';
-import Contacts from '@/components/Contacts/Contacts';
 import links from './assets/menuLinks.json';
 
-const Header = () => {
+const HeaderFixed = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const isVisible = useVisibility(50);
   const toggleModal = () => setIsOpen(prev => !prev);
-  
 
   return (
     <>
       <header
         className={`bg-stone-50 text-stone-900 bg-header sticky top-0 left-0 
-    mx-auto px-4 md:px-8 xl:px-36
-    pt-6 md:pt-8 xl:pt-8    
-    pb-4 md:pb-6 xl:pb-4 z-50 ${isVisible ? 'hidden' : 'visible'}`}
+    mx-auto px-16 py-4 z-50 ${isVisible ? 'visible' : 'hidden'}`}
       >
         <div className="max-w-[1440px] flex items-center justify-between mx-auto">
           <button
@@ -32,38 +28,27 @@ const Header = () => {
           >
             <HeaderSVG name="burgerMenu" />
           </button>
-          <div className="hidden xl:flex flex-col gap-[8px] md:w-[350px] font-ttChocolates500 text-[16px] font-medium leading-6 tracking-wider">
-            <Contacts
-              location={
-                <>
-                  м. Кам’янець-Подільский, БЦ “Розмарин” <br />  вул. Лесі Українки 31, каб. 605
-                </>
-              }        
-             />
-          </div>
-          <Logo className="w-[66px] h-[54px] flex-1 md:w-[126px] md:h-[100px]" />
-          <div className="hidden md:w-[150px] md:block md:flex-2 xl:w-[176px] xl-[32px]">
+          <Logo className="w-[64px] h-[54px] md:w-[126px] md:h-[100px]" />
+          <nav className="hidden xl:block">
+            <ul className="flex gap-[54px] justify-between font-ttChocolates500 text-[24px] text-stone-900 leading-[111%]">
+              {links.map((el, index) => (
+                <li key={index}>
+                  <Link href={el.path}>{el.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className="hidden md:w-[150px] md:block xl:w-[176px] xl-[32px]">
             <SocialMedia
               wrapperClassName="flex gap-2 flex-col"
               text={
                 <>
-                  Слідкуйте за{' '}
-                  <span className="uppercase font-bold">акціями</span> в наших соцмережах
+                  Слідкуйте за <strong className="uppercase">акціями</strong> в наших соцмережах
                 </>
               }
             />
           </div>
         </div>
-        <nav className="max-w-[1440px] mx-auto hidden xl:block xl:pt-12">
-          <ul className="flex justify-between font-ttChocolates500 text-[24px] text-stone-900 leading-[111%]">
-            {links.map((el, index) => (
-              <li key={index}>
-                <Link href={el.path}>{el.title}</Link>
-              </li>
-              ))
-           }
-          </ul>
-        </nav>
       </header>
       {isOpen && (
         <Modal
@@ -78,4 +63,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderFixed;

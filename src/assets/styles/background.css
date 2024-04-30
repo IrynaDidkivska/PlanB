@@ -101,7 +101,6 @@
     }
   }
 }
-
 /* Bg-About */
 
 :root {
@@ -200,3 +199,18 @@
     background-size: 100.042% 134.157%;
   }
 }
+
+/* Bg-Header */
+
+.bg-header {
+  background-image: linear-gradient(
+      rgba(255, 249, 247, 0.2),
+      rgba(255, 249, 247, 0.2)
+    ),
+    url('../../modules/Header/assets/HeaderBG.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
