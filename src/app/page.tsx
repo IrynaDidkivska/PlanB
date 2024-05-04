@@ -1,4 +1,12 @@
-import { AboutUs, Hero, Price, Services, Team, Slider } from '@/modules';
+import {
+  AboutUs,
+  Hero,
+  Price,
+  Services,
+  Team,
+  Slider,
+  Location,
+} from '@/modules';
 
 export default function Home() {
   return (
@@ -6,9 +14,10 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <Services />
-      <Price />
       <Team />
+      <Price />
       <Slider />
+      <Location />
     </div>
   );
 }
