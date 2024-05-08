@@ -9,11 +9,11 @@ interface ToggleButtonProps {
   className?: string;
 }
 
-export const ToggleButton: React.FC<ToggleButtonProps> = ({
+export const ToggleButton = ({
   onClick,
   isOpen,
   className,
-}) => {
+}: ToggleButtonProps) => {
   const { isOnMobile } = useMediaQueries();
   return (
     <>

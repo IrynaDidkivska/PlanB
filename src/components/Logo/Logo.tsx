@@ -5,7 +5,7 @@ type LogoProps = {
   className?: string;
 };
 
-const Logo: React.FC<LogoProps> = ({ className }) => {
+const Logo = ({ className }: LogoProps) => {
   return (
     <span className={twMerge('block w-80 h-80', className)}>
       <svg

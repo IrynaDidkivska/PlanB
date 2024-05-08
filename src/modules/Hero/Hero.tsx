@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { ButtonAppointment, Container, Modal, Section } from '@/components';
 import { Form } from '..';
 
-const Hero: React.FC = () => {
+const Hero = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleModal = () => setIsOpen(prev => !prev);
 

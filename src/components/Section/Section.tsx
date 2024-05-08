@@ -11,6 +11,7 @@ type SectionProps = {
 const Section = ({ children, className, id, style }: SectionProps) => {
   return (
     <section
+      id={id}
       className={twMerge(`pt-[120px] xl:pt-36`, className)}
       style={style}
     >

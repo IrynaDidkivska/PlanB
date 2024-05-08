@@ -9,7 +9,7 @@ export const ServicesList = () => {
       {services.map((service, index) => {
         return (
           <li key={index} className="rounded-xl">
-            <Link href="/" className="relative rounded-xl ">
+            <Link href={service.href} className="relative rounded-xl ">
               <Image
                 src={service.src}
                 alt={service.alt}

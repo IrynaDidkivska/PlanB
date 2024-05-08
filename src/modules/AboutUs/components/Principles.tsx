@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import useMediaQueries from '@/hooks/useMediaQueries';
 import { Subtitle } from '@/components';
 import { ToggleButton } from './ToggleButton';
@@ -15,7 +15,7 @@ interface PrinciplesProps {
     }[];
   };
 }
-export const Principles: React.FC<PrinciplesProps> = ({ items }) => {
+export const Principles = ({ items }: PrinciplesProps) => {
   const { isOnMobile } = useMediaQueries();
   const [isOpen, toggleButton] = useToggle();
 

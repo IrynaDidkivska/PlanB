@@ -16,7 +16,7 @@ interface ElectroProps {
   };
 }
 
-export const Electro: React.FC<ElectroProps> = ({ items }) => {
+export const Electro = ({ items }: ElectroProps) => {
   const { isOnMobile } = useMediaQueries();
   const [isOpen, toggleButton] = useToggle();
 

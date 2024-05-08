@@ -4,8 +4,8 @@ import {
   Price,
   Services,
   Team,
-  Slider,
   Location,
+  Feedback,
 } from '@/modules';
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <Services />
       <Team />
       <Price />
-      <Slider />
+      <Feedback />
       <Location />
     </div>
   );
