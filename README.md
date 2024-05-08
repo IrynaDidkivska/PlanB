@@ -47,11 +47,9 @@
 
 - **швидкий доступ до вебсайту**
 - **легке управління релізами через інтеграцію з Git**
-  [Відвідайте сайт за посиланням: ](https://plan-b-2235.vercel.app/)
+  [Відвідати сайт](https://plan-b-2235.vercel.app/)
 
 ## Розгортання проекту
-
-### Передумови
 
 Переконайтеся, що на вашій машині встановлені Node.js та npm (Node Package
 Manager). Це необхідно для запуску проекту локально.
@@ -139,13 +137,12 @@ TypeScript)
 ## Команда
 
 Проект розроблений:
-
-- **Ірина Дідківська:** Розробник
-  - [GitHub](https://github.com/IrynaDidkivska)
-  - [LinkedIn](https://www.linkedin.com/in/iryna-didkivska/)
 - **Олег Андрійчук:** Тімлід/Розробник/Steakholder
   - [GitHub](https://github.com/OAndrijchuk)
   - [LinkedIn](https://www.linkedin.com/in/oleh-andrijchuk/)
+- **Ірина Дідківська:** Розробник
+  - [GitHub](https://github.com/IrynaDidkivska)
+  - [LinkedIn](https://www.linkedin.com/in/iryna-didkivska/)
 - **Тарас Ковалик:** Розробник
   - [GitHub](https://github.com/tarik2454)
   - [LinkedIn](https://www.linkedin.com/in/taras-kovalyk/)
