@@ -13,7 +13,15 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const isVisible = useVisibility(50);
   const toggleModal = () => setIsOpen(prev => !prev);
-  
+
+  const scrolltoHash = function (element_id: string) {
+    const element = document.querySelector(`${element_id}`) as HTMLElement;
+    element?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+      inline: 'nearest',
+    });
+  };
 
   return (
     <>
@@ -36,10 +44,11 @@ const Header = () => {
             <Contacts
               location={
                 <>
-                  м. Кам’янець-Подільский, БЦ “Розмарин” <br />  вул. Лесі Українки 31, каб. 605
+                  м. Кам’янець-Подільский, БЦ “Розмарин” <br /> вул. Лесі
+                  Українки 31, каб. 605
                 </>
-              }        
-             />
+              }
+            />
           </div>
           <Logo className="w-[66px] h-[54px] flex-1 md:w-[126px] md:h-[100px]" />
           <div className="hidden md:w-[150px] md:block md:flex-2 xl:w-[176px] xl-[32px]">
@@ -48,7 +57,8 @@ const Header = () => {
               text={
                 <>
                   Слідкуйте за{' '}
-                  <span className="uppercase font-bold">акціями</span> в наших соцмережах
+                  <span className="uppercase font-bold">акціями</span> в наших
+                  соцмережах
                 </>
               }
             />
@@ -58,10 +68,11 @@ const Header = () => {
           <ul className="flex justify-between font-ttChocolates500 text-[24px] text-stone-900 leading-[111%]">
             {links.map((el, index) => (
               <li key={index}>
-                <Link href={el.path}>{el.title}</Link>
+                <Link href={el.path} onClick={() => scrolltoHash(el.path)}>
+                  {el.title}
+                </Link>
               </li>
-              ))
-           }
+            ))}
           </ul>
         </nav>
       </header>

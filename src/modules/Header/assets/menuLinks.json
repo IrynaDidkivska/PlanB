@@ -1,8 +1,8 @@
 [
-    {"title":"Про нас","path":"#"},
-    {"title":"Послуги","path":"#"},
-    {"title":"Наші спеціалісти","path":"#"},
-    {"title":"Ціни","path":"#"},
-    {"title":"Відгуки","path":"#"},
-    {"title":"Контакти","path":"#"}
+  { "title": "Про нас", "path": "#about" },
+  { "title": "Послуги", "path": "#services" },
+  { "title": "Наші спеціалісти", "path": "#team" },
+  { "title": "Ціни", "path": "#price" },
+  { "title": "Відгуки", "path": "#feedback" },
+  { "title": "Контакти", "path": "#" }
 ]

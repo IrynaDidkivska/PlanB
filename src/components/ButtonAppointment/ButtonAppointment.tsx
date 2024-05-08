@@ -8,12 +8,11 @@ type ButtonAppointmentProps = {
   onClick?: () => void;
 };
 
-const ButtonAppointment: React.FC<ButtonAppointmentProps> = ({
+const ButtonAppointment = ({
   type,
   children,
   onClick,
-}) => {
-  const [showModal, setShowModal] = useState(false);
+}: ButtonAppointmentProps) => {
   return (
     <>
       <button

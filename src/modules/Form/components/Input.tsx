@@ -18,7 +18,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   error?: string;
 }
 
-const Input: React.FC<InputProps> = ({
+const Input = ({
   label,
   id,
   name,
@@ -29,7 +29,7 @@ const Input: React.FC<InputProps> = ({
   onBlur,
   value,
   error,
-}) => {
+}: InputProps) => {
   return (
     <div className="flex flex-col justify-center min-w-[288px]">
       {error ? (

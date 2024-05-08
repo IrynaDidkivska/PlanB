@@ -18,7 +18,7 @@ interface LaserProps {
   };
 }
 
-export const Laser: React.FC<LaserProps> = ({ items }) => {
+export const Laser = ({ items }: LaserProps) => {
   const { isOnMobile } = useMediaQueries();
   const [isOpen, toggleButton] = useToggle();
 

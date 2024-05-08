@@ -6,7 +6,7 @@ import aboutData from './helpers/data.json';
 
 const AboutUs = () => {
   return (
-    <Section className="pb-[120px] bg-neutral-800 text-stone-50">
+    <Section id="about" className="pb-[120px] bg-neutral-800 text-stone-50">
       <Container>
         <SectionTitle className="mb-12 md:mb-[72px]">Про нас</SectionTitle>
         <p

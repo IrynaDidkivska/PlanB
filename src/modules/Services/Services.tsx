@@ -4,7 +4,7 @@ import { ServicesList } from './components/ServicesList';
 
 const Services = () => {
   return (
-    <Section className="bg-stone-50 w-full py-[120px] md:py-36">
+    <Section id="services" className="bg-stone-50 w-full py-[120px] md:py-36">
       <Container>
         <SectionTitle className="mb-[72px] text-stone-900">
           Послуги

@@ -33,7 +33,7 @@ const getInitialValues = () => {
   return initialValues;
 };
 
-const Form: React.FC<FormProps> = () => {
+const Form = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
