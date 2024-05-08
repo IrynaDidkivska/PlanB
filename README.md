@@ -1,36 +1,153 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# <img src="./src/app/favicon.ico" width="26" alt="Logo"> Plan B
 
-## Getting Started
+# Опис проекту
 
-First, run the development server:
+Цей репозиторій містить вихідний код вебсайту для салону лазерної та
+електроепіляції "Plan B".
+
+Сайт розроблений з використанням сучасних технологій та практик веб-розробки,
+щоб забезпечити:
+
+- зручний користувацький інтерфейс
+- високу ефективність обслуговування клієнтів
+- швидке завантаження сторінок
+- адаптивність до різних пристроїв
+
+---
+
+### Зміст
+
+1. [Технології](#технології)
+2. [Деплоймент](#деплоймент)
+3. [Розгортання проекту](#розгортання_проекту)
+4. [Структура проекту та CodeStyle](#code_style)
+5. [Команда](#команда)
+
+---
+
+## Технології
+
+Проект побудовано на наступному технологічному стеку:
+
+- **Next.js**: фреймворк для розробки серверно-рендерованих React додатків
+- **TypeScript**: додає строгу типізацію, забезпечуючи більшу стабільність і
+  виявлення помилок на ранніх етапах розробки
+- **React**: бібліотека для створення користувацького інтерфейсу
+- **Tailwind CSS**: утилітарний CSS-фреймворк для швидкої стилізації
+- **Formik**: бібліотека для роботи з формами
+- **Yup**: бібліотека для валідації форм
+- **Swiper**: бібліотека для створення слайдерів
+- **React-Loader-Spinner**: компоненти для відображення стану завантаження
+- **React-Responsive**: утиліти для адаптивного дизайну
+- **React-Select**: бібліотека для створення випадаючих списків
+
+## Деплоймент
+
+Сайт задеплоєно на Vercel. Це забезпечує:
+
+- **швидкий доступ до вебсайту**
+- **легке управління релізами через інтеграцію з Git**
+  [Відвідати сайт](https://plan-b-2235.vercel.app/)
+
+## Розгортання проекту
+
+Переконайтеся, що на вашій машині встановлені Node.js та npm (Node Package
+Manager). Це необхідно для запуску проекту локально.
+
+### Клонування репозиторію
+
+```bash
+git clone https://github.com/IrynaDidkivska/PlanB
+```
+
+### Встановлення залежностей
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### Запуск проекту
+
+Для локального запуску проекту використовуйте команду:
 
 ```bash
 npm run dev
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Сайт буде доступний за адресою [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Збірка проекту
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Ця команда збере всі необхідні файли для запуску сайту в папці build.:
 
-## Learn More
+```bash
+npm run build
+# or
+yarn run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Запустіть веб-сервер, який буде обслуговувати ваш сайт з папки build:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run start
+# or
+yarn run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Ця команда запустить веб-сервер, який буде обслуговувати ваш сайт з папки build.
 
-## Deploy on Vercel
+# Структура проекту та CodeStyle
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Компоненти
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Компоненти розташовані у директорії /src/components.
+- Модулі розташовані у директорії /src/modules.
+- Компоненти - це окремі нежалезні частини, які можна перевикористовувати.
+- Модулі - це блоки (секції), які ми підключаємо до [page](src/app/page.tsx).
+
+## Гілки
+
+Для додавання змін до проекту виконуйте наступні кроки:
+
+1. Створення та переключення на нову гілку:
+
+```bash
+git checkout -b <імя-вашої-гілки>
+```
+
+Назва гілки відповідає задачі, яку ви виконуєте (feat/ticket-1/create-header /
+bugfix/ticket-42/slider-navigation-fix)
+
+2. Додавання змін:
+
+```bash
+git add .
+git commit -m "ваше повідомлення коміту"
+git push origin <імя-вашої-гілки>
+```
+
+Назва коміту відповідає задачі, яку ви робили (feat: add new button component;
+add new button components to templates / refactor: rewrite button component in
+TypeScript)
+
+## Команда
+
+Проект розроблений:
+- **Олег Андрійчук:** Тімлід/Розробник/Steakholder
+  - [GitHub](https://github.com/OAndrijchuk)
+  - [LinkedIn](https://www.linkedin.com/in/oleh-andrijchuk/)
+- **Ірина Дідківська:** Розробник
+  - [GitHub](https://github.com/IrynaDidkivska)
+  - [LinkedIn](https://www.linkedin.com/in/iryna-didkivska/)
+- **Тарас Ковалик:** Розробник
+  - [GitHub](https://github.com/tarik2454)
+  - [LinkedIn](https://www.linkedin.com/in/taras-kovalyk/)
+- **Ольга Лазаренко:** Розробник/QA
+- - [GitHub](https://github.com/Olga-Olga)
+  - [LinkedIn](https://www.linkedin.com/in/olga-lazarenko-1161482a/)
+
+---

@@ -16,11 +16,7 @@ const options = [
   { value: `${SUGARING}`, label: SUGARING },
 ];
 
-const SelectWrapper: React.FC<SelectWrapperProps> = ({
-  value,
-  onChange,
-  error,
-}) => {
+const SelectWrapper = ({ value, onChange, error }: SelectWrapperProps) => {
   return (
     <>
       {error ? (

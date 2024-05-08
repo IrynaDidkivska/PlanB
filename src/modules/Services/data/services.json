@@ -3,18 +3,21 @@
     "id": 1,
     "title": "Лазерна епіляція",
     "src": "/services/laser@2x.jpeg",
-    "alt": "Laser apparat"
+    "alt": "Laser apparat",
+    "href": "/laser"
   },
   {
     "id": 2,
     "title": "Електро епіляція",
     "src": "/services/electro@2x.jpeg",
-    "alt": "Electro apparat"
+    "alt": "Electro apparat",
+    "href": "/electro"
   },
   {
     "id": 3,
     "title": "Шугарінг",
     "src": "/services/sugar@2x.jpeg",
-    "alt": "Sugaring procedure"
+    "alt": "Sugaring procedure",
+    "href": "/sugaring"
   }
 ]
