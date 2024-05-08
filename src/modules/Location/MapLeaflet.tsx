@@ -7,13 +7,13 @@ import 'leaflet-defaulticon-compatibility';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 
 const MapLeafLet = () => {
-  const position: [number, number] = [48.6815218837271, 26.584552963858513];
+  const position: [number, number] = [48.68152, 26.58455];
   const customIcon = new Icon({
     iconUrl: './pin.png',
-    iconSize: [45, 42],
+    iconSize: [40, 64],
   });
   return (
-    <div className="h-[600px]">
+    <div className="h-[600px] ">
       <MapContainer
         center={position}
         zoom={19}
@@ -23,6 +23,8 @@ const MapLeafLet = () => {
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          className="map-tiles"
+          // className="leaflet-tile"
         />
         <Marker position={position} icon={customIcon}>
           <Popup>
