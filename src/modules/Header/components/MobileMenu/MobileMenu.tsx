@@ -3,7 +3,6 @@ import SocialMedia from '@/components/SocialMedia/SocialMedia';
 import Link from 'next/link';
 import links from '../../assets/menuLinks.json';
 
-
 const MobileMenu = () => {
   return (
     <div className="pt-[50px] px-[15px] md:px-[40px]">
@@ -15,19 +14,19 @@ const MobileMenu = () => {
           mediaLinkClassName="w-[23px]"
           text={
             <>
-              Слідкуйте за <strong className="uppercase">акціями</strong> в наших соцмережах
-       </>  
+              Слідкуйте за <strong className="uppercase">акціями</strong> в
+              наших соцмережах
+            </>
           }
         />
       </div>
       <nav className="pb-[65px]">
         <ul className="flex flex-col gap-6 font-ttChocolates500 font-medium text-2xl items-start">
           {links.map((el, index) => (
-              <li key={index}>
-                <Link href={el.path}>{el.title}</Link>
-              </li>
-              ))
-           }
+            <li key={index}>
+              <Link href={el.path}>{el.title}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
       <Contacts
@@ -35,8 +34,8 @@ const MobileMenu = () => {
         location={
           <>
             <address className="hidden md:inline">
-              м. Кам’янець-Подільский, БЦ “Розмарин” <br /> вул. Лесі Українки
-              31, каб. 605
+              <p>м. Кам’янець-Подільский, БЦ “Розмарин”</p>
+              <p>вул. Лесі Українки 31, каб. 605</p>
             </address>
             <span className="md:hidden">Адреса</span>
           </>

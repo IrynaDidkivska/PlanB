@@ -10,7 +10,7 @@ const Location = () => {
       }),
     []
   );
-  return <div>{<DynamicMapLeafLet />}</div>;
+  return <>{<DynamicMapLeafLet />}</>;
 };
 
 export default Location;
