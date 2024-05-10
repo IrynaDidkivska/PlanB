@@ -1,10 +1,18 @@
-export const SpriteSVG = ({ name }: { name: string }) => {
+import { twMerge } from 'tailwind-merge';
+
+export const SpriteSVG = ({
+  name,
+  className,
+}: {
+  name: string;
+  className?: string;
+}) => {
   switch (name) {
     case 'marker':
       return (
         <svg
           fill="none"
-          className="w-full h-full fill-current stroke-current"
+          className={twMerge('fill-current stroke-current', className)}
           viewBox="0 0 16 16"
         >
           <g clipPath="url(#a)" fill="currentColor">
@@ -22,7 +30,7 @@ export const SpriteSVG = ({ name }: { name: string }) => {
     case 'phone_call':
       return (
         <svg
-          className="w-full h-full fill-current stroke-current"
+          className={twMerge('fill-current stroke-current', className)}
           viewBox="0 0 16 16"
         >
           <g clipPath="url(#a)">
