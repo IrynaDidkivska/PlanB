@@ -1,11 +1,10 @@
 'use client';
 import React, { useState } from 'react';
+import { SpriteSVG } from '@/assets/img/SpriteSVG';
 import { MobileMenu, Nav, HeaderFixed } from './components';
-import { Logo, Modal } from '@/components';
+import { Logo, Modal, Contacts } from '@/components';
 import { SocialMedia, Promotion } from '@/components/SocialMedia/index';
 import useVisibility from '@/hooks/useVisibility';
-import Contacts from '@/components/Contacts/Contacts';
-import { SpriteSVG } from '@/assets/img/SpriteSVG';
 import useMediaQueries from '@/hooks/useMediaQueries';
 
 const Header = () => {
@@ -17,14 +16,11 @@ const Header = () => {
   return (
     <>
       <header
-        className={`bg-stone-50 text-stone-900 bg-header sticky top-0 left-0 
-    mx-auto px-4 md:px-8 xl:px-36
-    pt-6 md:pt-8 xl:pt-8    
-    pb-4 md:pb-6 xl:pb-4 z-50 ${
-      isVisible && isOnDesktop ? 'hidden' : 'visible'
-    }`}
+        className={`sticky top-0 left-0 bg-stone-50 text-stone-900 bg-header  px-4 md:px-8 pt-6 md:pt-8  pb-4 md:pb-6 z-50
+        xl:px-36 xl:pt-8 xl:pb-4 
+        ${isVisible && isOnDesktop ? 'hidden' : 'visible'}`}
       >
-        <div className="max-w-[1440px] flex items-center justify-between mx-auto">
+        <div className="flex items-center justify-between mb-12">
           <button
             onClick={() => setIsOpen(true)}
             type="button"
@@ -33,7 +29,7 @@ const Header = () => {
           >
             <SpriteSVG name="burger_menu" />
           </button>
-          {/* <div className="hidden xl:flex flex-col gap-[8px] md:w-[350px] font-ttChocolates500 text-[16px] font-medium leading-6 tracking-wider">
+          <div className="hidden xl:flex flex-col gap-[8px]  font-ttChocolates500 text-[16px] font-medium leading-6 tracking-wider">
             <Contacts
               location={
                 <div className="flex flex-col gap-3 not-italic">
@@ -42,8 +38,8 @@ const Header = () => {
                 </div>
               }
             />
-          </div> */}
-          {/* <Logo className="w-[66px] h-[54px] flex-1 md:w-[126px] md:h-[100px]" /> */}
+          </div>
+          <Logo className="w-[66px] h-[54px] md:w-[126px] md:h-[102px]" />
           <div className="hidden md:flex md:flex-col md:gap-2 md:max-w-[139px] xl:gap-4 xl:max-w-[168px] ">
             <Promotion />
             <SocialMedia />
