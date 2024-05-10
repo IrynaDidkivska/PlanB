@@ -32,10 +32,10 @@ const Header = () => {
           {/* <div className="hidden xl:flex flex-col gap-[8px] md:w-[350px] font-ttChocolates500 text-[16px] font-medium leading-6 tracking-wider">
             <Contacts
               location={
-                <>
-                  м. Кам’янець-Подільский, БЦ “Розмарин” <br /> вул. Лесі
-                  Українки 31, каб. 605
-                </>
+                <div className="flex flex-col gap-3 not-italic">
+                  <p>м. Кам’янець-Подільский, БЦ “Розмарин”</p>
+                  <p>вул. Лесі Українки 31, каб. 605</p>
+                </div>
               }
             />
           </div> */}
