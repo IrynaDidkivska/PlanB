@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
-import useVisibility from '@/hooks/useVisibility';
+import { useVisibility } from '@/hooks/index';
 import { SpriteSVG } from '@/assets/img/SpriteSVG';
 
 const ButtonScrollToUp: React.FC = () => {

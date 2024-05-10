@@ -3,7 +3,7 @@ import React from 'react';
 import { Nav } from '.';
 import { Logo } from '@/components';
 import { Promotion, SocialMedia } from '@/components/SocialMedia/index';
-import useVisibility from '@/hooks/useVisibility';
+import { useVisibility } from '@/hooks';
 
 export const HeaderFixed = () => {
   const isVisible = useVisibility(50);

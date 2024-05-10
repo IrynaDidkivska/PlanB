@@ -4,8 +4,7 @@ import { SpriteSVG } from '@/assets/img/SpriteSVG';
 import { MobileMenu, Nav, HeaderFixed } from './components';
 import { Logo, Modal, Contacts } from '@/components';
 import { SocialMedia, Promotion } from '@/components/SocialMedia/index';
-import useVisibility from '@/hooks/useVisibility';
-import useMediaQueries from '@/hooks/useMediaQueries';
+import { useVisibility, useMediaQueries } from '@/hooks';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -16,16 +15,16 @@ const Header = () => {
   return (
     <>
       <header
-        className={`sticky top-0 left-0 bg-stone-50 text-stone-900 bg-header  px-4 md:px-8 pt-6 md:pt-8  pb-4 md:pb-6 z-50
+        className={`sticky top-0 left-0 bg-stone-50 text-stone-900 bg-header px-4 md:px-8 pt-6 md:pt-8  pb-4 md:pb-6 z-50
         xl:px-36 xl:pt-8 xl:pb-4 
         ${isVisible && isOnDesktop ? 'hidden' : 'visible'}`}
       >
-        <div className="flex items-center justify-between mb-12">
+        <div className="flex items-center md:justify-between xl:mb-12">
           <button
             onClick={() => setIsOpen(true)}
             type="button"
             aria-label="burger"
-            className="w-10 h-10 flex-none xl:hidden md:w-16 md:h-16"
+            className="w-10 h-10 sm:mr-[71px] md:w-16 md:h-16 xl:hidden"
           >
             <SpriteSVG name="burger_menu" />
           </button>

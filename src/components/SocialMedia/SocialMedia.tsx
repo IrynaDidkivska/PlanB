@@ -3,7 +3,7 @@ import { twMerge } from 'tailwind-merge';
 import Link from 'next/link';
 import { SpriteSVG } from '@/assets/img/SpriteSVG';
 import socials from './socials.json';
-import useMediaQueries from '@/hooks/useMediaQueries';
+import { useMediaQueries } from '@/hooks';
 
 interface SocialMediaProps {
   className?: string;
