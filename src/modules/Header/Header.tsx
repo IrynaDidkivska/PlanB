@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { MobileMenu, Nav } from './components';
+import { MobileMenu, Nav, HeaderFixed } from './components';
 import { Logo, Modal } from '@/components';
 import { SocialMedia, Promotion } from '@/components/SocialMedia/index';
 import useVisibility from '@/hooks/useVisibility';
@@ -49,7 +49,7 @@ const Header = () => {
             <SocialMedia />
           </div>
         </div>
-        {/* <Nav isMobile={false} /> */}
+        <Nav isMobile={false} />
       </header>
       {isOpen && (
         <Modal
@@ -60,6 +60,7 @@ const Header = () => {
           <MobileMenu />
         </Modal>
       )}
+      {isOnDesktop ? <HeaderFixed /> : null}
     </>
   );
 };

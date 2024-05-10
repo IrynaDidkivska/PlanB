@@ -1,3 +1,4 @@
 import { MobileMenu } from './MobileMenu';
 import { Nav } from './Nav';
-export { MobileMenu, Nav };
+import { HeaderFixed } from './HeaderFixed';
+export { MobileMenu, Nav, HeaderFixed };

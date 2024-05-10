@@ -6,13 +6,13 @@ import { twMerge } from 'tailwind-merge';
 export const Nav = ({ isMobile }: { isMobile: boolean }) => {
   return (
     <>
-      <nav className={isMobile ? 'pb-[65px]' : 'hidden xl:block xl:pt-12'}>
+      <nav className={isMobile ? 'pb-[65px]' : 'hidden xl:block'}>
         <ul
           className={`flex font-ttChocolates500 
         ${
           isMobile
             ? 'items-start flex-col gap-6 text-xl font-medium text-stone-50 leading-7 '
-            : 'text-2xl font-medium text-stone-900 leading-loose'
+            : 'justify-between items-center gap-[54px] text-2xl font-medium text-stone-900 leading-loose'
         }`}
         >
           {links.map((el, index) => (
