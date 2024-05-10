@@ -1,12 +1,10 @@
 'use client';
 import React, { useState } from 'react';
-import { MobileMenu } from './components';
-import Link from 'next/link';
+import { MobileMenu, Nav } from './components';
 import { Logo, Modal } from '@/components';
-import HeaderSVG from './HeaderSVG';
-import SocialMedia from '@/components/SocialMedia/SocialMedia';
+import { SocialMedia } from '@/components/SocialMedia/index';
 import useVisibility from '@/hooks/useVisibility';
-import links from './assets/menuLinks.json';
+import { SpriteSVG } from '@/assets/img/SpriteSVG';
 
 const HeaderFixed = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -19,17 +17,18 @@ const HeaderFixed = () => {
         className={`bg-stone-50 text-stone-900 bg-header sticky top-0 left-0 
     mx-auto px-16 py-4 z-50 ${isVisible ? 'visible' : 'hidden'}`}
       >
-        <div className="max-w-[1440px] flex items-center justify-between mx-auto">
+        <>
           <button
             onClick={() => setIsOpen(true)}
             type="button"
             aria-label="burger"
             className="w-10 h-10 flex-none xl:hidden md:w-16 md:h-16"
           >
-            <HeaderSVG name="burgerMenu" />
+            <SpriteSVG name="burger_menu" />
           </button>
           <Logo className="w-[64px] h-[54px] md:w-[126px] md:h-[100px]" />
-          <nav className="hidden xl:block">
+          <Nav isMobile={false} />
+          {/* <nav className="hidden xl:block">
             <ul className="flex gap-[54px] justify-between font-ttChocolates500 text-[24px] text-stone-900 leading-[111%]">
               {links.map((el, index) => (
                 <li key={index}>
@@ -37,18 +36,11 @@ const HeaderFixed = () => {
                 </li>
               ))}
             </ul>
-          </nav>
+          </nav> */}
           <div className="hidden md:w-[150px] md:block xl:w-[176px] xl-[32px]">
-            <SocialMedia
-              wrapperClassName="flex gap-2 flex-col"
-              text={
-                <>
-                  Слідкуйте за <strong className="uppercase">акціями</strong> в наших соцмережах
-                </>
-              }
-            />
+            <SocialMedia />
           </div>
-        </div>
+        </>
       </header>
       {isOpen && (
         <Modal

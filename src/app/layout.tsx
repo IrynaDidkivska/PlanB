@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="ua">
       <body>
         <Header />
-        <HeaderFixed />
+        {/* <HeaderFixed /> */}
         <main>
           {children}
           <ButtonScrollToUp />
