@@ -40,7 +40,7 @@ const Header = () => {
             />
           </div> */}
           {/* <Logo className="w-[66px] h-[54px] flex-1 md:w-[126px] md:h-[100px]" /> */}
-          <div className="hidden md:flex md:gap-4 ">
+          <div className="hidden md:flex md:flex-col md:gap-4 md:w-[168px] ">
             <Promotion />
             <SocialMedia />
           </div>
