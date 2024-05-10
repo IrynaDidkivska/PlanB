@@ -29,14 +29,7 @@ const Header = () => {
             <SpriteSVG name="burger_menu" />
           </button>
           <div className="hidden xl:flex flex-col gap-[8px]  font-ttChocolates500 text-[16px] font-medium leading-6 tracking-wider">
-            <Contacts
-              location={
-                <div className="flex flex-col gap-3 not-italic">
-                  <p>м. Кам’янець-Подільский, БЦ “Розмарин”</p>
-                  <p>вул. Лесі Українки 31, каб. 605</p>
-                </div>
-              }
-            />
+            <Contacts />
           </div>
           <Logo className="w-[66px] h-[54px] md:w-[126px] md:h-[102px]" />
           <div className="hidden md:flex md:flex-col md:gap-2 md:max-w-[139px] xl:gap-4 xl:max-w-[168px] ">
@@ -50,9 +43,9 @@ const Header = () => {
         <Modal
           isOpen={isOpen}
           onClose={toggleModal}
-          contentClassName="w-screen h-screen overflow-y-auto"
+          contentClassName="top-0 left-0 transform -translate-x-0 -translate-y-0 md:p-0 max-w-64 md:max-w-[336px] rounded-none"
         >
-          <MobileMenu />
+          <MobileMenu toggleModal={toggleModal} />
         </Modal>
       )}
       {isOnDesktop ? <HeaderFixed /> : null}

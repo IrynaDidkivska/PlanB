@@ -3,10 +3,19 @@ import links from '../assets/menuLinks.json';
 import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 
-export const Nav = ({ isMobile }: { isMobile: boolean }) => {
+interface NavProps {
+  isMobile: boolean;
+  toggleModal?: () => void;
+}
+
+export const Nav = ({ isMobile, toggleModal }: NavProps) => {
   return (
     <>
-      <nav className={isMobile ? 'pb-[65px]' : 'hidden xl:block'}>
+      <nav
+        className={
+          isMobile ? 'pb-[65px] max-w-[175px] md:pl-5 ' : 'hidden xl:block'
+        }
+      >
         <ul
           className={`flex font-ttChocolates500 
         ${
@@ -18,6 +27,7 @@ export const Nav = ({ isMobile }: { isMobile: boolean }) => {
           {links.map((el, index) => (
             <li key={index}>
               <Link
+                onClick={toggleModal}
                 href={el.path}
                 className={`nav relative font-ttChocolates500 font-medium active:font-bold 
         ${isMobile ? 'after:bg-stone-50' : 'after:bg-stone-900'}`}

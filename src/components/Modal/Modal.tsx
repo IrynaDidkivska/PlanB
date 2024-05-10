@@ -34,18 +34,15 @@ type ModalProps = {
   closeBtnClassName?: string;
 };
 
-
-
-const Modal: React.FC<ModalProps> = (props) => {
-
-const {
-  isOpen,
-  onClose,
-  children,
-  closeBtnClassName,
-  contentClassName,
-  backdropClassName,
-} = props;
+const Modal: React.FC<ModalProps> = props => {
+  const {
+    isOpen,
+    onClose,
+    children,
+    closeBtnClassName,
+    contentClassName,
+    backdropClassName,
+  } = props;
 
   const modalRoot: Element | null = document.querySelector('#modal-root');
 
@@ -65,7 +62,9 @@ const {
     };
   }, [isOpen, onClose]);
 
-  const handleBackdropClick = (event: React.MouseEvent<HTMLDivElement>) => {
+  const handleBackdropClick = (
+    event: React.MouseEvent<HTMLDivElement>
+  ): void => {
     if (event.target === event.currentTarget) {
       onClose();
     }
@@ -76,7 +75,10 @@ const {
       <>
         {isOpen && (
           <div
-            className={twMerge(" z-[9999999] fixed inset-0 flex items-center justify-center bg-black bg-opacity-50", backdropClassName)}
+            className={twMerge(
+              ' z-[9999999] fixed inset-0 flex items-center justify-center bg-black bg-opacity-50',
+              backdropClassName
+            )}
             onClick={handleBackdropClick}
           >
             <div
