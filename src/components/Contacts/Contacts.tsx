@@ -1,36 +1,49 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
+import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 import { SpriteSVG } from '@/assets/img/SpriteSVG';
 
 type ContactsProps = {
-  className?: string;
   isOnMobile?: boolean;
   isOnTablet?: boolean;
-  isOnDesktop?: boolean;
-  location?: ReactNode;
+  isDesktop?: boolean;
+  toggleModal?: () => void;
 };
 
 const Contacts = ({
-  className,
-  location,
-  isOnMobile,
+  isDesktop,
+  toggleModal,
   isOnTablet,
-  isOnDesktop,
+  isOnMobile,
 }: ContactsProps) => {
   return (
     <div
       className={twMerge(
         'text-base font-medium leading-none tracking-tight',
-        isOnDesktop ? 'text-stone-50' : 'text-stone-900'
+        isDesktop ? 'text-stone-50' : 'text-stone-900',
+        isOnMobile && 'flex items-center justify-between'
       )}
     >
-      <div className={twMerge('flex gap-3 mb-4', isOnTablet && 'mb-6')}>
+      <div
+        className={twMerge(
+          'flex gap-3 mb-4',
+          isOnTablet && 'mb-6',
+          isOnMobile && 'mb-0'
+        )}
+      >
         <SpriteSVG name="marker" className="w-4 h-4" />
-        <address className="flex flex-col gap-3 not-italic">
-          <p>м. Кам’янець-Подільский, БЦ “Розмарин”</p>
-          <p>вул. Лесі Українки 31, каб. 605</p>
-        </address>
+        {isOnMobile ? (
+          <Link href="#footer" onClick={toggleModal}>
+            Адреса
+          </Link>
+        ) : (
+          <address className="flex flex-col gap-3 not-italic">
+            <p>м. Кам’янець-Подільский, БЦ “Розмарин”</p>
+            <p>вул. Лесі Українки 31, каб. 605</p>
+          </address>
+        )}
       </div>
+
       <a
         href="tel:+380681268087"
         className={twMerge(

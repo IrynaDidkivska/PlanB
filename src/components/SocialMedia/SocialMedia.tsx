@@ -3,21 +3,26 @@ import { twMerge } from 'tailwind-merge';
 import Link from 'next/link';
 import { SpriteSVG } from '@/assets/img/SpriteSVG';
 import socials from './socials.json';
-import { useMediaQueries } from '@/hooks';
 
 interface SocialMediaProps {
-  className?: string;
+  isOnMobile?: boolean;
 }
 
-export const SocialMedia = ({ className }: SocialMediaProps) => {
-  const { isOnMobile, isOnTablet } = useMediaQueries();
+export const SocialMedia = ({ isOnMobile }: SocialMediaProps) => {
   return (
     <>
-      <ul className={twMerge('flex justify-between')}>
+      <ul className={twMerge('flex justify-between', isOnMobile && 'gap-4')}>
         {socials.map((el, index) => (
-          <li key={index}>
-            <Link href={el.href} className={twMerge('w-6 xl:w-8')}>
-              <SpriteSVG name={el.name} className="w-6 xl:w-8" />
+          <li
+            key={index}
+            className="p-1 rounded-full bg-transparent hover:bg-red-200"
+          >
+            <Link
+              href={el.href}
+              target="_blank"
+              className={twMerge('w-6 xl:w-8 ')}
+            >
+              <SpriteSVG name={el.name} className="w-6 xl:w-8 " />
             </Link>
           </li>
         ))}

@@ -13,14 +13,14 @@ export const Nav = ({ isMobile, toggleModal }: NavProps) => {
     <>
       <nav
         className={
-          isMobile ? 'pb-[65px] max-w-[175px] md:pl-5 ' : 'hidden xl:block'
+          isMobile ? 'pb-32 max-w-[175px] md:pl-5 ' : 'hidden xl:block'
         }
       >
         <ul
           className={`flex font-ttChocolates500 
         ${
           isMobile
-            ? 'items-start flex-col gap-6 text-xl font-medium text-stone-50 leading-7 '
+            ? 'items-start flex-col gap-4 text-xl font-medium text-stone-50 leading-7 '
             : 'justify-between items-center gap-[54px] text-2xl font-medium text-stone-900 leading-loose'
         }`}
         >

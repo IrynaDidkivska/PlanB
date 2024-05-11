@@ -43,12 +43,17 @@ const Header = () => {
         <Modal
           isOpen={isOpen}
           onClose={toggleModal}
-          contentClassName="top-0 left-0 transform -translate-x-0 -translate-y-0 md:p-0 max-w-64 md:max-w-[336px] rounded-none"
+          contentClassName="top-0 left-0 transform -translate-x-0 -translate-y-0 sm:px-6 sm:pb-4 sm:pt-[78px] sm:max-w-[320px]
+          md:p-0  md:max-w-[336px] rounded-none"
         >
-          <MobileMenu toggleModal={toggleModal} />
+          <MobileMenu
+            toggleModal={toggleModal}
+            isOnMobile={isOnMobile}
+            isOnTablet={isOnTablet}
+          />
         </Modal>
       )}
-      {isOnDesktop ? <HeaderFixed /> : null}
+      {isOnDesktop && <HeaderFixed />}
     </>
   );
 };
