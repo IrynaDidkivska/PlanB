@@ -21,7 +21,7 @@ export default function RootLayout({
           {children}
           <ButtonScrollToUp />
           <Button />
-          <div id="modal-root"></div>
+          <div id="modal-root" />
         </main>
         <Footer />
       </body>

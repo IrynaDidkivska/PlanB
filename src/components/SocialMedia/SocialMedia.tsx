@@ -3,12 +3,9 @@ import { twMerge } from 'tailwind-merge';
 import Link from 'next/link';
 import { SpriteSVG } from '@/assets/img/SpriteSVG';
 import socials from './socials.json';
+import { HeaderProps } from '@/interfaces/header';
 
-interface SocialMediaProps {
-  isOnMobile?: boolean;
-}
-
-export const SocialMedia = ({ isOnMobile }: SocialMediaProps) => {
+export const SocialMedia = ({ isOnMobile }: HeaderProps) => {
   return (
     <>
       <ul className={twMerge('flex justify-between', isOnMobile && 'gap-4')}>

@@ -2,20 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 import { SpriteSVG } from '@/assets/img/SpriteSVG';
-
-type ContactsProps = {
-  isOnMobile?: boolean;
-  isOnTablet?: boolean;
-  isDesktop?: boolean;
-  toggleModal?: () => void;
-};
+import { HeaderProps } from '@/interfaces/header';
 
 const Contacts = ({
   isDesktop,
   toggleModal,
   isOnTablet,
   isOnMobile,
-}: ContactsProps) => {
+}: HeaderProps) => {
   return (
     <div
       className={twMerge(

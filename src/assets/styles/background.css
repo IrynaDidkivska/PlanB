@@ -211,6 +211,17 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 
+/* Bg-Footer */
+
+.bg-footer {
+  background-image: linear-gradient(
+      rgba(255, 249, 247, 0.2),
+      rgba(255, 249, 247, 0.2)
+    ),
+    url('../../modules/Footer/assets/Footer@2x.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

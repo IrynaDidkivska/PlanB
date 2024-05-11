@@ -1,11 +1,10 @@
 import React from 'react';
-import links from '../assets/menuLinks.json';
 import Link from 'next/link';
-import { twMerge } from 'tailwind-merge';
+import links from '../assets/menuLinks.json';
+import { HeaderProps } from '@/interfaces/header';
 
-interface NavProps {
+interface NavProps extends HeaderProps {
   isMobile: boolean;
-  toggleModal?: () => void;
 }
 
 export const Nav = ({ isMobile, toggleModal }: NavProps) => {
