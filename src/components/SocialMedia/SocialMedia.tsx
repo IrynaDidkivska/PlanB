@@ -1,48 +1,29 @@
-import { SpriteSVG } from '@/assets/img/SpriteSVG';
-import Link from 'next/link';
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { twMerge } from 'tailwind-merge';
+import Link from 'next/link';
+import { SpriteSVG } from '@/assets/img/SpriteSVG';
+import socials from './socials.json';
+import { HeaderProps } from '@/interfaces/header';
 
-type SocialMediaProps = {
-  wrapperClassName?: string;
-  textClassName?: string;
-  mediaClassName?: string;
-  text?: ReactNode;
-  mediaLinkClassName?: string;
-};
-
-export const SocialMedia = ({
-  wrapperClassName,
-  textClassName,
-  mediaClassName,
-  text,
-  mediaLinkClassName,
-}: SocialMediaProps) => {
+export const SocialMedia = ({ isOnMobile }: HeaderProps) => {
   return (
-    <div className={twMerge('m-auto', wrapperClassName)}>
-      <div
-        className={twMerge(
-          'font-ttChocolates500 text-[16px] md:text-[18px]',
-          textClassName
-        )}
-      >
-        {/* Слідкуйте за <strong className="uppercase">акціями</strong> в наших
-        соцмережах */}
-        {text}
-      </div>
-      <div className={twMerge('flex justify-between', mediaClassName)}>
-        <Link className={twMerge('md:w-[24px]', mediaLinkClassName)} href="#">
-          <SpriteSVG name="instagram" />
-        </Link>
-        <Link className={twMerge('md:w-[24px]', mediaLinkClassName)} href="#">
-          <SpriteSVG name="tic_tok" />
-        </Link>
-        <Link className={twMerge('md:w-[24px]', mediaLinkClassName)} href="#">
-          <SpriteSVG name="facebook" />
-        </Link>
-      </div>
-    </div>
+    <>
+      <ul className={twMerge('flex justify-between', isOnMobile && 'gap-4')}>
+        {socials.map((el, index) => (
+          <li
+            key={index}
+            className="p-1 rounded-full bg-transparent hover:bg-red-200"
+          >
+            <Link
+              href={el.href}
+              target="_blank"
+              className={twMerge('w-6 xl:w-8 ')}
+            >
+              <SpriteSVG name={el.name} className="w-6 xl:w-8 " />
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 };
-
-export default SocialMedia;

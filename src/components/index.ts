@@ -9,3 +9,4 @@ export { default as Logo } from './Logo/Logo';
 export { default as ButtonScrollToUp } from './ButtonScrollToUp/ButtonScrollToUp';
 export { default as ButtonAppointment } from './ButtonAppointment/ButtonAppointment';
 export { default as Modal } from './Modal/Modal';
+export { default as Contacts } from './Contacts/Contacts';

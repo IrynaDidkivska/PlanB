@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import '../assets/styles/globals.css';
 import { Button, ButtonScrollToUp } from '@/components';
-import { Footer, Header, HeaderFixed } from '@/modules';
+import { Footer, Header } from '@/modules';
 
 export const metadata: Metadata = {
   title: 'Студія PlanB',
@@ -17,12 +17,11 @@ export default function RootLayout({
     <html lang="ua">
       <body>
         <Header />
-        <HeaderFixed />
         <main>
           {children}
           <ButtonScrollToUp />
           <Button />
-          <div id="modal-root"></div>
+          <div id="modal-root" />
         </main>
         <Footer />
       </body>

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import useMediaQueries from '@/hooks/useMediaQueries';
+import { useMediaQueries } from '@/hooks';
 import { Subtitle } from '@/components';
 import { ToggleButton } from './ToggleButton';
 import useToggle from '../helpers/useToggle';

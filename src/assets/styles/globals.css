@@ -130,9 +130,29 @@ body .react-select__menu {
   filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3)
     brightness(0.9);
 }
-body .leaflet-popup-content p {
-  margin: 0;
-}
+body .leaflet-popup-content p,
+body .leaflet-popup-content svg,
 body .leaflet-popup-content a {
   color: #1d1c1c;
+  margin: 0;
+}
+body .leaflet-popup-content-wrapper {
+  max-width: 320px;
+}
+.nav {
+  &:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: -3px;
+    content: '';
+    display: block;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  &:hover:after {
+    width: 100%;
+    left: 0;
+  }
 }

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
-import useMediaQueries from '@/hooks/useMediaQueries';
+import { useMediaQueries } from '@/hooks';
 import useToggle from '../helpers/useToggle';
 import { Subtitle } from '@/components';
 import { ToggleButton } from './ToggleButton';

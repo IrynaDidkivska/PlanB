@@ -28,14 +28,7 @@ const MapLeafLet = () => {
         />
         <Marker position={position} icon={customIcon}>
           <Popup>
-            <Contacts
-              location={
-                <div className="flex flex-col gap-3 not-italic">
-                  <p>м. Кам’янець-Подільский, БЦ “Розмарин”</p>
-                  <p>вул. Лесі Українки 31, каб. 605</p>
-                </div>
-              }
-            />
+            <Contacts />
           </Popup>
         </Marker>
         <a href="/">на головну</a>

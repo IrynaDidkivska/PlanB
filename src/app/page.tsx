@@ -10,7 +10,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="mb-40">
+    <>
       <Hero />
       <AboutUs />
       <Services />
@@ -18,6 +18,6 @@ export default function Home() {
       <Price />
       <Feedback />
       <Location />
-    </div>
+    </>
   );
 }

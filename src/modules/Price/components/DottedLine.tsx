@@ -1,4 +1,4 @@
-import useMediaQueries from '@/hooks/useMediaQueries';
+import { useMediaQueries } from '@/hooks';
 
 export default function DottedLine() {
   const { isOnMobile, isOnTablet } = useMediaQueries();

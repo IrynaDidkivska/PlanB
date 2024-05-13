@@ -1,6 +1,6 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
-import useMediaQueries from '@/hooks/useMediaQueries';
+import { useMediaQueries } from '@/hooks';
 import { PolygonSVG } from '../img/PoligonSVG';
 
 interface ToggleButtonProps {

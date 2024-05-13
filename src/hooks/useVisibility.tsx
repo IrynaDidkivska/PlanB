@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 
-const useVisibility = (offset = 500) => {
+export const useVisibility = (offset = 500) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -18,5 +18,3 @@ const useVisibility = (offset = 500) => {
 
   return isVisible;
 };
-
-export default useVisibility;

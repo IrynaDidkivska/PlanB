@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import useVisibility from '@/hooks/useVisibility';
+import { useVisibility } from '@/hooks/index';
 import { Modal } from '..';
 import { Form } from '@/modules';
 

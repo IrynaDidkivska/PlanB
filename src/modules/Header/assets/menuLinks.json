@@ -4,5 +4,5 @@
   { "title": "Наші спеціалісти", "path": "#team" },
   { "title": "Ціни", "path": "#price" },
   { "title": "Відгуки", "path": "#feedback" },
-  { "title": "Контакти", "path": "#" }
+  { "title": "Контакти", "path": "#footer" }
 ]
