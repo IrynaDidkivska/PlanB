@@ -2,12 +2,15 @@ import React from 'react';
 import Link from 'next/link';
 import links from '../assets/menuLinks.json';
 import { HeaderProps } from '@/interfaces/header';
+import { usePathname } from 'next/navigation';
 
 interface NavProps extends HeaderProps {
   isMobile: boolean;
 }
 
 export const Nav = ({ isMobile, toggleModal }: NavProps) => {
+  const pathname = usePathname();
+
   return (
     <>
       <nav
@@ -28,8 +31,8 @@ export const Nav = ({ isMobile, toggleModal }: NavProps) => {
           {links.map((el, index) => (
             <li key={index}>
               <Link
+                href={pathname === '/' ? `${el.path}` : `/${el.path}`}
                 onClick={toggleModal}
-                href={el.path}
                 className={`nav relative font-ttChocolates500 font-medium active:font-bold 
         ${isMobile ? 'after:bg-stone-50' : 'after:bg-stone-900'}`}
               >
