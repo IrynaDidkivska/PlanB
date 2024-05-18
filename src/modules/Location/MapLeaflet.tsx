@@ -8,7 +8,7 @@ import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import Contacts from '@/components/Contacts/Contacts';
 
 const MapLeafLet = () => {
-  const position: [number, number] = [48.68152, 26.58455];
+  const position: [number, number] = [48.6817, 26.58439];
   const customIcon = new Icon({
     iconUrl: './pin@3x.png',
     iconSize: [40, 64],

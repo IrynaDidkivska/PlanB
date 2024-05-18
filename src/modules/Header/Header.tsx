@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { SpriteSVG } from '@/assets/img/SpriteSVG';
 import { MobileMenu, Nav, HeaderFixed } from './components';
 import { Logo, Modal, Contacts } from '@/components';
@@ -7,8 +7,9 @@ import { SocialMedia, Promotion } from '@/components/SocialMedia/index';
 import { useVisibility, useMediaQueries } from '@/hooks';
 
 const Header = () => {
+  const headerRef = useRef(null);
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const isVisible = useVisibility(50);
+  const isVisible = useVisibility(headerRef);
   const { isOnMobile, isOnTablet, isOnDesktop } = useMediaQueries();
   const toggleModal = () => setIsOpen(prev => !prev);
 
@@ -17,9 +18,10 @@ const Header = () => {
       <header
         className={`sticky top-0 left-0 bg-stone-50 text-stone-900 bg-header px-4 md:px-8 pt-6 md:pt-8  pb-4 md:pb-6 z-50
         xl:px-36 xl:pt-8 xl:pb-4 
-        ${isVisible && isOnDesktop ? 'hidden' : 'visible'}`}
+        ${isVisible && isOnDesktop ? ' hidden' : ' visible '}
+       `}
       >
-        <div className="flex items-center md:justify-between xl:mb-12">
+        <div className="flex items-center md:justify-between max-w-[1440px] m-auto xl:mb-12">
           <button
             onClick={() => setIsOpen(true)}
             type="button"
@@ -53,7 +55,7 @@ const Header = () => {
           />
         </Modal>
       )}
-      {isOnDesktop && <HeaderFixed />}
+      {isOnDesktop && isVisible && <HeaderFixed />}
     </>
   );
 };

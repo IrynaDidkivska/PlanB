@@ -12,7 +12,9 @@ export const Nav = ({ isMobile, toggleModal }: NavProps) => {
     <>
       <nav
         className={
-          isMobile ? 'pb-32 max-w-[175px] md:pl-5 ' : 'hidden xl:block'
+          isMobile
+            ? 'pb-32 max-w-[175px] md:pl-5 '
+            : 'hidden max-w-[1440px] m-auto xl:block'
         }
       >
         <ul

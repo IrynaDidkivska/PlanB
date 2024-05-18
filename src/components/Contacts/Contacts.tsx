@@ -20,12 +20,15 @@ const Contacts = ({
     >
       <div
         className={twMerge(
-          'flex gap-3 mb-4',
+          'flex  gap-3 mb-4',
           isOnTablet && 'mb-6',
-          isOnMobile && 'mb-0'
+          isOnMobile && 'mb-0 items-center'
         )}
       >
-        <SpriteSVG name="marker" className="w-4 h-4" />
+        <div className="p-1 h-full rounded-full bg-transparent tr-all  hover:text-stone-900 hover:bg-red-200 hover:scale-110">
+          <SpriteSVG name="marker" className="w-4 h-4" />
+        </div>
+
         {isOnMobile ? (
           <Link href="#footer" onClick={toggleModal}>
             Адреса
@@ -37,17 +40,26 @@ const Contacts = ({
           </address>
         )}
       </div>
-
-      <a
-        href="tel:+380681268087"
+      <div
         className={twMerge(
-          'flex gap-3 items-center',
+          'flex gap-3 items-center rounded-full bg-transparent tr-all ',
           isOnTablet && 'justify-center'
         )}
       >
-        <SpriteSVG name="phone_call" className="w-4 h-4" />
-        +38 068 126 8087
-      </a>
+        <div className="p-1 rounded-full bg-transparent tr-all hover:text-stone-900 hover:bg-red-200 hover:scale-110">
+          <SpriteSVG name="phone_call" className="w-4 h-4 " />
+        </div>
+
+        <a
+          href="tel:+380681268087"
+          className={twMerge(
+            'flex gap-3 items-center ',
+            isOnTablet && 'justify-center'
+          )}
+        >
+          +38 068 126 8087
+        </a>
+      </div>
     </div>
   );
 };
