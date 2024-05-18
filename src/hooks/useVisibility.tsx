@@ -1,12 +1,12 @@
 'use client';
 import { useState, useEffect } from 'react';
 
-export const useVisibility = (headerRef: React.RefObject<HTMLElement>) => {
+export const useVisibility = (headerRef?: React.RefObject<HTMLElement>) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const calculateOffset = () => {
-      if (headerRef.current) {
+      if (headerRef?.current) {
         const rect = headerRef.current.getBoundingClientRect();
         return rect.height;
       }

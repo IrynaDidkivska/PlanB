@@ -7,7 +7,7 @@ import { Form } from '@/modules';
 
 const Button: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const isVisible = useVisibility(500);
+  const isVisible = useVisibility();
   const toggleModal = () => setIsOpen(prev => !prev);
 
   return (
