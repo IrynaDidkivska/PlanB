@@ -8,7 +8,9 @@ import { HeaderProps } from '@/interfaces/header';
 export const SocialMedia = ({ isOnMobile }: HeaderProps) => {
   return (
     <>
-      <ul className={twMerge('flex justify-between', isOnMobile && 'gap-4')}>
+      <ul
+        className={twMerge('flex justify-between', isOnMobile && 'gap-[11px]')}
+      >
         {socials.map((el, index) => (
           <li
             key={index}
