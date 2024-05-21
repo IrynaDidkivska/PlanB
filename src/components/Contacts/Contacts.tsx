@@ -25,7 +25,7 @@ const Contacts = ({
           isOnMobile && 'mb-0 items-center'
         )}
       >
-        <div className="p-1 h-full rounded-full bg-transparent tr-all  hover:text-stone-900 hover:bg-red-200 hover:scale-110">
+        <div className="p-1 h-full rounded-full bg-transparent tr-all  hover:text-stone-900 hover:bg-red-200 xl:hover:scale-110">
           <SpriteSVG name="marker" className="w-4 h-4" />
         </div>
 
@@ -34,8 +34,8 @@ const Contacts = ({
             Адреса
           </Link>
         ) : (
-          <address className="flex flex-col gap-3 not-italic">
-            <p>м. Кам’янець-Подільский, БЦ “Розмарин”</p>
+          <address className="flex flex-col gap-3 not-italic nowrap">
+            <p>м. Кам’янець-Подільский,БЦ “Розмарин”</p>
             <p>вул. Лесі Українки 31, каб. 605</p>
           </address>
         )}
@@ -46,7 +46,7 @@ const Contacts = ({
           isOnTablet && 'justify-center'
         )}
       >
-        <div className="p-1 rounded-full bg-transparent tr-all hover:text-stone-900 hover:bg-red-200 hover:scale-110">
+        <div className="p-1 rounded-full bg-transparent tr-all hover:text-stone-900 hover:bg-red-200 xl:hover:scale-110">
           <SpriteSVG name="phone_call" className="w-4 h-4 " />
         </div>
 
