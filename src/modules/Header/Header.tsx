@@ -45,7 +45,7 @@ const Header = () => {
         <Modal
           isOpen={isOpen}
           onClose={toggleModal}
-          contentClassName="top-0 left-0 transform -translate-x-0 -translate-y-0 sm:px-6 sm:pb-4 sm:pt-[78px] sm:max-w-[320px] h-lvh
+          contentClassName="flex top-0 left-0 transform -translate-x-0 -translate-y-0  px-0 sm:pb-4 sm:pt-[78px] sm:max-w-[320px] h-lvh
           md:p-0  md:max-w-[336px] rounded-none"
         >
           <MobileMenu
