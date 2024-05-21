@@ -1,13 +1,10 @@
 import React from 'react';
-import { Container, Section, SectionTitle } from '@/components';
+import { PageComponent } from '@/components';
 import { SUGARING } from '@/assets/consts/services';
+import content from '../../assets/data/sugaring.json';
 
 export default function Sugaring() {
   return (
-    <Section>
-      <Container>
-        <SectionTitle className="text-stone-900">{SUGARING}</SectionTitle>
-      </Container>
-    </Section>
+    <PageComponent {...content} SUGARING={SUGARING} ELECTRO={''} LASER={''} />
   );
 }

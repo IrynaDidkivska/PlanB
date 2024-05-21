@@ -1,15 +1,10 @@
 import React from 'react';
-import { Container, Section, SectionTitle } from '@/components';
+import { PageComponent } from '@/components';
 import { ELECTRO } from '@/assets/consts/services';
-import { PageComponent } from '@/components/PageComponent/PageComponent';
+import content from '../../assets/data/electro.json';
 
 export default function Electro() {
   return (
-    <Section>
-      <Container className="text-stone-900">
-        <SectionTitle className="text-stone-900">{ELECTRO}</SectionTitle>
-        <PageComponent />
-      </Container>
-    </Section>
+    <PageComponent {...content} ELECTRO={ELECTRO} SUGARING={''} LASER={''} />
   );
 }
