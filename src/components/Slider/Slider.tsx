@@ -1,9 +1,6 @@
-import React from 'react'
+import { SliderComponent } from './components';
+import sliderData from './data/slider-data.json';
 
-const Slider = () => {
-  return (
-    <div>Slider</div>
-  )
+export default function Slider() {
+  return <SliderComponent sliderData={sliderData} />;
 }
-
-export default Slider

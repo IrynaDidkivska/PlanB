@@ -1,13 +1,8 @@
 import React from 'react';
-import { Container, Section, SectionTitle } from '@/components';
+import { PageComponent } from '@/components';
 import { ELECTRO } from '@/assets/consts/services';
+import content from '../../assets/data/electro.json';
 
 export default function Electro() {
-  return (
-    <Section>
-      <Container>
-        <SectionTitle className="text-stone-900">{ELECTRO}</SectionTitle>
-      </Container>
-    </Section>
-  );
+  return <PageComponent {...content} ELECTRO={ELECTRO} />;
 }

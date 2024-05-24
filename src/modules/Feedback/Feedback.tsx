@@ -1,6 +1,6 @@
 import { Container, Section, SectionTitle } from '@/components';
 import React from 'react';
-import Slider from '../Slider/Slider';
+import Slider from '../../components/Slider/Slider';
 
 const Feedback = () => {
   return (

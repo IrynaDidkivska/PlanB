@@ -83,7 +83,8 @@ export const SpriteSVG = ({
       return (
         <svg
           viewBox="0 0 32 32"
-          className="w-full h-full fill-current stroke-current"
+          className={twMerge(' stroke-current', className)}
+          fill="currentColor"
         >
           <path
             fill="none"
