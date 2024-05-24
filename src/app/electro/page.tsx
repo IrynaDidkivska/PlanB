@@ -4,7 +4,5 @@ import { ELECTRO } from '@/assets/consts/services';
 import content from '../../assets/data/electro.json';
 
 export default function Electro() {
-  return (
-    <PageComponent {...content} ELECTRO={ELECTRO} SUGARING={''} LASER={''} />
-  );
+  return <PageComponent {...content} ELECTRO={ELECTRO} />;
 }

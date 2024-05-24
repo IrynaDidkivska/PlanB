@@ -225,3 +225,27 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+/* Bg-Pages */
+
+.bg-pages {
+  background: linear-gradient(
+        to right,
+        rgba(253, 235, 229, 0.6) 0%,
+        rgba(253, 235, 229, 0.6) 100%
+      )
+      no-repeat,
+    rgba(255, 249, 247, 1);
+  background-size: 50% 70%;
+  background-position: 90% 100%;
+
+  @media only screen and (min-width: 768px) {
+    background-size: 47% 70%;
+    background-position: 92% 100%;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    background-size: 40% 70%;
+    background-position: 83% 100%;
+  }
+}

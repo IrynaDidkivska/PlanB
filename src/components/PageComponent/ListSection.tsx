@@ -1,3 +1,4 @@
+import { twMerge } from 'tailwind-merge';
 import Subtitle from '../Subtitle/Subtitle';
 
 interface ListItem {
@@ -8,13 +9,15 @@ interface ListItem {
 export const ListSection = ({
   title,
   items,
+  className,
 }: {
   title: string;
   items: ListItem[];
+  className?: string;
 }) => (
-  <div>
+  <div className={twMerge(`mb-20 xl:w-1/2`, className)}>
     <Subtitle className="mb-2.5 text-stone-900">{title}</Subtitle>
-    <ul className="mb-20">
+    <ul>
       {items.map((item, index) => (
         <li key={index} className="mb-3 last:mb-0">
           <p className="text-xl font-bold">
