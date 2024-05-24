@@ -1,6 +1,6 @@
 import React from 'react';
 import { ListSection, FAQSection } from './index';
-import { Container, Section, SectionTitle } from '@/components';
+import { Container, Section, SectionTitle, Slider } from '@/components';
 
 interface PageContentProps {
   description: string;
@@ -53,7 +53,7 @@ const PageComponent = ({
             className="xl:ml-auto"
           />
           <ListSection title={benefits_title} items={benefits} />
-          <div className="mb-24"> Here shoud be a slider :)</div>
+          <Slider />
           <FAQSection title={faq_title} items={faq} />
         </Container>
       </Section>
