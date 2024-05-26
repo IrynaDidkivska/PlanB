@@ -5,10 +5,16 @@ import { SpriteSVG } from '@/assets/img/SpriteSVG';
 import socials from './socials.json';
 import { HeaderProps } from '@/interfaces/header';
 
-export const SocialMedia = ({ isOnMobile }: HeaderProps) => {
+export const SocialMedia = ({ isOnMobile, className }: HeaderProps) => {
   return (
     <>
-      <ul className={twMerge('flex justify-between', isOnMobile && 'gap-4')}>
+      <ul
+        className={twMerge(
+          'flex justify-between',
+          isOnMobile && 'gap-4',
+          className
+        )}
+      >
         {socials.map((el, index) => (
           <li
             key={index}
