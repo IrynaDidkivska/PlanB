@@ -2,6 +2,6 @@ export interface HeaderProps {
   isOnMobile?: boolean;
   isOnTablet?: boolean;
   isDesktop?: boolean;
-  className?: string;
+  isFooter?: boolean;
   toggleModal?: () => void;
 }
