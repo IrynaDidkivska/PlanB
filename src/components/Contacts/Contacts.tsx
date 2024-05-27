@@ -9,14 +9,18 @@ const Contacts = ({
   toggleModal,
   isOnTablet,
   isOnMobile,
+  className,
 }: HeaderProps) => {
   return (
     <div
-      className={twMerge(
-        'text-base font-medium leading-none tracking-tight',
-        isDesktop ? 'text-stone-50' : 'text-stone-900',
-        isOnMobile && 'flex items-center justify-between'
-      )}
+      className={
+        (twMerge(
+          'text-base font-medium leading-none tracking-tight',
+          isDesktop ? 'text-stone-50' : 'text-stone-900',
+          isOnMobile && 'flex items-center justify-between'
+        ),
+        className)
+      }
     >
       <div
         className={twMerge(

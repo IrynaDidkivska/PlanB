@@ -5,7 +5,7 @@ import { SpriteSVG } from '@/assets/img/SpriteSVG';
 import socials from './socials.json';
 import { HeaderProps } from '@/interfaces/header';
 
-export const SocialMedia = ({ isOnMobile }: HeaderProps) => {
+export const SocialMedia = ({ isOnMobile, className }: HeaderProps) => {
   return (
     <>
       <ul
