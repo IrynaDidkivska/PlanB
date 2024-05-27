@@ -22,7 +22,7 @@ const Contacts = ({
     >
       <div
         className={twMerge(
-          'flex items-start gap-3 mb-4',
+          'flex items-start gap-3 mb-4 cursor-pointer',
           isOnTablet && 'mb-6',
           isOnMobile && 'mb-0 items-center'
         )}
@@ -42,7 +42,7 @@ const Contacts = ({
               isFooter && 'md:text-lg md:leading-5 md:tracking-[0.18px]'
             )}
           >
-            <p>м. Кам’янець-Подільский,БЦ “Розмарин”</p>
+            <p>м. Кам&apos;янець-Подільский,БЦ &#8220;Розмарин&#8221;</p>
             <p>вул. Лесі Українки 31, каб. 605</p>
           </address>
         )}

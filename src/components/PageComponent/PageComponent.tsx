@@ -1,6 +1,12 @@
 import React from 'react';
-import { ListSection, FAQSection } from './index';
-import { Container, Section, SectionTitle, Slider } from '@/components';
+import { FAQSection } from './index';
+import {
+  Container,
+  Section,
+  SectionTitle,
+  Slider,
+  ListSection,
+} from '@/components';
 
 interface PageContentProps {
   description: string;

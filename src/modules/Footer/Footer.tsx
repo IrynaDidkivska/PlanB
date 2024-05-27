@@ -11,25 +11,22 @@ const Footer = () => {
         sm:py-14 sm:px-3 sm:items-center
         xl:py-20 xl:px-36 xl:flex-row xl:items-start xl:justify-between"
       >
-        <div className="">
+        <div>
           <FooterSubtitle>Контакти</FooterSubtitle>
 
           <Contacts isFooter={true} />
         </div>
-        <div className="">
+        <div>
           <FooterSubtitle>Графік роботи</FooterSubtitle>
-
-          <div className="">
-            <p className="mb-2 sm:text-base sm:font-medium sm:leading-5 sm:text-center">
-              Понеділок - Неділя
-            </p>
-            <p className="mb-2 sm:text-base sm:font-medium sm:leading-5 sm:text-center">
-              08:15 - 21:00
-            </p>
-            <p className="sm:text-base font-semibold ">Онлайн підтримка 24/7</p>
-          </div>
+          <p className="mb-2 sm:text-base sm:font-medium sm:leading-5 sm:text-center">
+            Понеділок - Неділя
+          </p>
+          <p className="mb-2 sm:text-base sm:font-medium sm:leading-5 sm:text-center">
+            08:15 - 21:00
+          </p>
+          <p className="sm:text-base font-semibold ">Онлайн підтримка 24/7</p>
         </div>
-        <div className="">
+        <div>
           <FooterSubtitle> Ми в соцмережах</FooterSubtitle>
 
           <SocialMedia isFooter={true} />
