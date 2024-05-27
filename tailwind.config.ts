@@ -16,6 +16,9 @@ const config: Config = {
           300: '#F6B7A4',
           700: '#C22B2B',
         },
+        rose: {
+          100: '#FDEBE5',
+        },
         neutral: {
           800: '#202020',
           400: '#A5A1A1',

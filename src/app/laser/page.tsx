@@ -1,13 +1,8 @@
 import React from 'react';
-import { Container, Section, SectionTitle } from '@/components';
+import { PageComponent } from '@/components';
 import { LASER } from '@/assets/consts/services';
+import content from '../../assets/data/laser.json';
 
 export default function Laser() {
-  return (
-    <Section>
-      <Container>
-        <SectionTitle className="text-stone-900">{LASER}</SectionTitle>
-      </Container>
-    </Section>
-  );
+  return <PageComponent {...content} LASER={LASER} />;
 }

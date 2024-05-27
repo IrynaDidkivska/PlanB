@@ -10,3 +10,4 @@ export { default as ButtonScrollToUp } from './ButtonScrollToUp/ButtonScrollToUp
 export { default as ButtonAppointment } from './ButtonAppointment/ButtonAppointment';
 export { default as Modal } from './Modal/Modal';
 export { default as Contacts } from './Contacts/Contacts';
+export { default as PageComponent } from './PageComponent/PageComponent';

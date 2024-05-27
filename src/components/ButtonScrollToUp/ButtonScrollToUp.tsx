@@ -5,7 +5,7 @@ import { useVisibility } from '@/hooks/index';
 import { SpriteSVG } from '@/assets/img/SpriteSVG';
 
 const ButtonScrollToUp: React.FC = () => {
-  const isVisible = useVisibility(500);
+  const isVisible = useVisibility();
 
   const scrollToTop = () => {
     isVisible &&
