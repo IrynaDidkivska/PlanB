@@ -52,13 +52,11 @@ export default function SliderComponent({ sliderData }: SliderComponentProps) {
           type: 'fraction',
         }}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-        className="mySwiper"
+        className="feedbackSwiper"
       >
         {sliderData.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div>
               <p>{slide.description}</p>
-            </div>
           </SwiperSlide>
         ))}
 
