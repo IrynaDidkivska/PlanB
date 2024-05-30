@@ -30,7 +30,7 @@
     height: 328px !important;
     border-radius: 12px;
     color: #1d1c1c !important;
-    padding: 24px 32px !important;
+    padding: 24px 28px !important;
     transition: transform 0.25s ease;
 
     background-color: #fff9f7 !important;
@@ -40,11 +40,7 @@
     background-position: center 24px;
 
       p {
-        display: -webkit-box;
-        overflow-y: hidden;
-        text-overflow: ellipsis;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 4;
+        /* word-break: break-all; */
         margin-top: 64px;
         font-size: 16px !important;
         line-height: 1.5em !important;
@@ -58,7 +54,12 @@
       background-position: center 30px;
 
         p {
-          margin-top: 32px !important;
+          display: -webkit-box;
+          overflow-y: hidden;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4;
+          margin-top: 30px !important;
           font-size: 14px !important;
           line-height: 1.42 !important;
         }
@@ -78,11 +79,6 @@
     z-index: 1000 !important;
     min-height: 172px  !important;
   
-
-    p {
-      -webkit-line-clamp: 6;
-      max-height: calc(1.5em * 6);
-    }
     @media screen and (min-width: 768px) {
       transform: scaleX(1.7) scaleY(1.63) !important;
       background-size: calc(100% - 64em) 32em;
@@ -90,11 +86,10 @@
 
       p {
         width: 100%;
-        margin-top: 32em;
         font-size: 10px !important;
         line-height: 1.5em !important;
-        -webkit-line-clamp: 6;
-        max-height: calc(1.5em * 6);
+        -webkit-line-clamp: 7;
+        max-height: calc(1.5em * 7);
       }
     }
 
