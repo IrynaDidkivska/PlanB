@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge';
 import { useVisibility } from '@/hooks/index';
 import { SpriteSVG } from '@/assets/img/SpriteSVG';
 
-const ButtonScrollToUp: React.FC = () => {
+const ButtonScrollToUp = () => {
   const isVisible = useVisibility();
 
   const scrollToTop = () => {
@@ -18,8 +18,8 @@ const ButtonScrollToUp: React.FC = () => {
     <button
       onClick={scrollToTop}
       type="button"
-      className={twMerge(`fixed right-4 bottom-52 w-[36px] h-[48px]  bg-red-200 opacity-50 rounded-custom cursor-pointer shadow-up hover:bg-red-100 focus:bg-red-100 active:bg-red-300
-      md:right-8
+      className={twMerge(`fixed sm:bottom-12 sm:right-64 w-[36px] h-[48px]  bg-red-200 opacity-50 rounded-custom cursor-pointer shadow-up z-10 hover:bg-red-100 focus:bg-red-100 active:bg-red-300
+     md:right-8  md:bottom-52 
       xl:right-16
       ${isVisible ? 'visible' : 'hidden'}
       `)}

@@ -22,7 +22,7 @@ export const FAQSection = ({ title, items }: FAQSectionProps) => {
 
   return (
     <>
-      <Subtitle className="text-stone-900">{title}</Subtitle>
+      <Subtitle className="mt-24 text-stone-900 ">{title}</Subtitle>
       <ul className="xl:w-1/2">
         {items.map((item, index) => (
           <li key={index} className="relative mb-4 last:mb-0">

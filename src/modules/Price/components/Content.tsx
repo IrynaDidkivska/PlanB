@@ -1,14 +1,16 @@
+import { TableData } from '../data/dataTypes';
 import { Table } from './index';
 
-type ContentProps = {
+interface ContentProps {
   activeTab: number | null;
   index: number;
-};
+  data: TableData;
+}
 
-export default function Content({ activeTab, index }: ContentProps) {
+export default function Content({ activeTab, index, data }: ContentProps) {
   return (
-    <div className={`${activeTab === index ? 'block' : 'hidden'}`}>
-      <Table />
+    <div className={`${activeTab === index ? 'block tr-accordion' : 'hidden'}`}>
+      <Table data={data} activeTab={activeTab} />
     </div>
   );
 }

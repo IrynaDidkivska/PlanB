@@ -1,9 +1,21 @@
 'use client';
 
 import { useState } from 'react';
-import { accordionHeaderData } from '../data/accordion-header-data.json';
 import SpriteSVG from '../img/SpriteSvg';
 import { DottedLine, Content } from './index';
+import laserData from '../data/laser.json';
+import electroData from '../data/electro.json';
+import sugaringData from '../data/sugaring.json';
+import { TableData } from '../data/dataTypes';
+import { LASER, ELECTRO, SUGARING } from '@/assets/consts/services';
+
+const dataMapping: { [key: number]: TableData } = {
+  0: laserData,
+  1: electroData,
+  2: sugaringData,
+};
+
+const accordionHeaderData = [LASER, ELECTRO, SUGARING];
 
 export default function Accordion() {
   const [activeTab, setActiveTab] = useState<number | null>(null);
@@ -29,7 +41,7 @@ export default function Accordion() {
   };
 
   return (
-    <div>
+    <>
       <ul className="flex flex-col gap-16">
         {accordionHeaderData.map((item: string, index: number) => (
           <li key={index} className="relative">
@@ -51,12 +63,15 @@ export default function Accordion() {
                 </button>
               </div>
             </div>
-
             <DottedLine />
-            <Content activeTab={activeTab} index={index} />
+            <Content
+              activeTab={activeTab}
+              index={index}
+              data={dataMapping[index]}
+            />
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 }

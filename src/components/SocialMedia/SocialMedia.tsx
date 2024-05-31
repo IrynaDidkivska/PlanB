@@ -18,7 +18,7 @@ export const SocialMedia = ({ isOnMobile, isFooter }: HeaderProps) => {
         {socials.map((el, index) => (
           <li
             key={index}
-            className="p-0.5 rounded-full bg-transparent tr-all hover:text-stone-900 hover:bg-red-200"
+            className="sm:p-[1.5px] md:p-1 rounded-full bg-transparent tr-all hover:text-stone-900 hover:bg-red-200  hover:scale-110"
           >
             <Link
               href={el.href}
@@ -27,7 +27,7 @@ export const SocialMedia = ({ isOnMobile, isFooter }: HeaderProps) => {
             >
               <SpriteSVG
                 name={el.name}
-                className="w-6 xl:w-8 tr-all hover:scale-75"
+                className="w-6 xl:w-8 tr-all hover:scale-110"
               />
             </Link>
           </li>
