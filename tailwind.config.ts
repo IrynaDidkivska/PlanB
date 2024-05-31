@@ -18,6 +18,7 @@ const config: Config = {
         },
         rose: {
           100: '#FDEBE5',
+          200: '#FFDAD4',
         },
         neutral: {
           800: '#202020',
