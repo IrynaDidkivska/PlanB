@@ -16,9 +16,9 @@ const Header = () => {
   return (
     <>
       <header
-        hidden={isOnDesktop && isVisible}
-        className={`sticky top-0 left-0 bg-stone-50 text-stone-900 bg-header px-4 md:px-8 pt-6 md:pt-8  pb-4 md:pb-6 z-50
-        xl:px-36 xl:pt-8 xl:pb-4 
+        ref={headerRef}
+        className={`top-0 left-0 bg-stone-50 sticky text-stone-900 bg-header px-4 md:px-8 pt-6 md:pt-8  pb-4 md:pb-6 z-50 
+        xl:px-36 xl:pt-8 xl:pb-4 xl:relative 
        `}
       >
         <div className="flex items-center sm:justify-start md:justify-between max-w-[1440px] m-auto xl:mb-12">

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { FAQSection } from './index';
 import {
   Container,
@@ -59,7 +60,7 @@ const PageComponent = ({
             className="xl:ml-auto"
           />
           <ListSection title={benefits_title} items={benefits} />
-          <Slider />
+          <PhotoSlider sliderData={photoSliderData} />
           <FAQSection title={faq_title} items={faq} />
         </Container>
       </Section>
