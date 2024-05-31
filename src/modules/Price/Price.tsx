@@ -1,5 +1,5 @@
 import { Container, Section, SectionTitle } from '@/components';
-import { Accordion } from './components';
+import { Accordion, Table } from './components';
 
 export default function Price() {
   return (
