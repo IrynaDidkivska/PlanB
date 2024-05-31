@@ -6,7 +6,7 @@ interface ListItem {
   description: string;
 }
 
-export const ListSection = ({
+const ListSection = ({
   title,
   items,
   className,
@@ -29,3 +29,4 @@ export const ListSection = ({
     </ul>
   </div>
 );
+export default ListSection;

@@ -9,18 +9,20 @@ const Contacts = ({
   toggleModal,
   isOnTablet,
   isOnMobile,
+  isFooter,
 }: HeaderProps) => {
   return (
     <div
       className={twMerge(
         'text-base font-medium leading-none tracking-tight',
         isDesktop ? 'text-stone-50' : 'text-stone-900',
-        isOnMobile && 'flex items-center justify-between'
+        isOnMobile && 'flex items-center justify-between',
+        isFooter && 'flex flex-col items-center '
       )}
     >
       <div
         className={twMerge(
-          'flex  gap-3 mb-4',
+          'flex items-start gap-3 mb-4 cursor-pointer',
           isOnTablet && 'mb-6',
           isOnMobile && 'mb-0 items-center'
         )}
@@ -34,8 +36,13 @@ const Contacts = ({
             Адреса
           </Link>
         ) : (
-          <address className="flex flex-col gap-3 not-italic nowrap">
-            <p>м. Кам’янець-Подільский,БЦ “Розмарин”</p>
+          <address
+            className={twMerge(
+              'flex flex-col gap-3 not-italic nowrap',
+              isFooter && 'md:text-lg md:leading-5 md:tracking-[0.18px]'
+            )}
+          >
+            <p>м. Кам&apos;янець-Подільский,БЦ &#8220;Розмарин&#8221;</p>
             <p>вул. Лесі Українки 31, каб. 605</p>
           </address>
         )}

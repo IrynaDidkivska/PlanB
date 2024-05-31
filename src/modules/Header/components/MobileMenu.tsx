@@ -9,9 +9,13 @@ export const MobileMenu = ({
   isOnTablet,
 }: HeaderProps) => {
   return (
-    <div className="flex flex-col justify-between sm:px-6 sm:max-w-[320px] md:pt-[160px] md:pb-8 md:px-5 md:h-screen">
+    <div
+      className="overflow-y-auto snap-mandatory scrollable-component thin-scrollbar flex flex-col justify-between px-5
+    sm:max-w-[320px]  
+    md:max-w-[336px] md:pt-[160px] md:pb-8 md:px-5 md:h-screen"
+    >
       {isOnMobile && (
-        <div className="flex items-center gap-6 pb-[66px] w-screen text-stone-50">
+        <div className="flex items-center gap-6 pb-[66px] w-screen text-stone-50 sm:max-w-[280px] ">
           <Promotion />
           <SocialMedia isOnMobile={isOnMobile} />
         </div>

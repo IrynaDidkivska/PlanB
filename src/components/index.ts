@@ -11,3 +11,4 @@ export { default as ButtonAppointment } from './ButtonAppointment/ButtonAppointm
 export { default as Modal } from './Modal/Modal';
 export { default as Contacts } from './Contacts/Contacts';
 export { default as PageComponent } from './PageComponent/PageComponent';
+export { default as ListSection } from './ListSection/ListSection';

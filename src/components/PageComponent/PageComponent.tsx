@@ -1,8 +1,13 @@
 import React from 'react';
-import { ListSection, FAQSection } from './index';
-import { Container, Section, SectionTitle, Slider } from '@/components';
-import { PhotoSlider } from '../Slider/components';
-import photoSliderData from '../Slider/data/photo-slider-data.json';
+
+import { FAQSection } from './index';
+import {
+  Container,
+  Section,
+  SectionTitle,
+  Slider,
+  ListSection,
+} from '@/components';
 
 interface PageContentProps {
   description: string;
