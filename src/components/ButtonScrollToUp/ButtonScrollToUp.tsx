@@ -18,7 +18,7 @@ const ButtonScrollToUp = () => {
     <button
       onClick={scrollToTop}
       type="button"
-      className={twMerge(`fixed sm:bottom-12 sm:right-64 w-[36px] h-[48px]  bg-red-200 opacity-50 rounded-custom cursor-pointer shadow-up z-10 hover:bg-red-100 focus:bg-red-100 active:bg-red-300
+      className={twMerge(`fixed sm:bottom-12 right-4 w-[36px] h-[48px]  bg-red-200 opacity-50 rounded-custom cursor-pointer shadow-up z-10 hover:bg-red-100 focus:bg-red-100 active:bg-red-300
      md:right-8  md:bottom-52 
       xl:right-16
       ${isVisible ? 'visible' : 'hidden'}
