@@ -20,9 +20,11 @@ const Contacts = ({
         isFooter && 'flex flex-col items-center '
       )}
     >
-      <div
+      <Link
+        href="https://maps.app.goo.gl/sV1J8hV3RUwMZLDj6"
+        target="_blank"
         className={twMerge(
-          'flex items-start gap-3 mb-4 cursor-pointer',
+          'flex items-start gap-3 mb-4 cursor-pointer tr-all ',
           isOnTablet && 'mb-6',
           isOnMobile && 'mb-0 items-center'
         )}
@@ -46,10 +48,10 @@ const Contacts = ({
             <p>вул. Лесі Українки 31, каб. 605</p>
           </address>
         )}
-      </div>
+      </Link>
       <div
         className={twMerge(
-          'flex gap-3 items-center rounded-full bg-transparent tr-all ',
+          'flex gap-3 items-center rounded-full bg-transparent tr-all',
           isOnTablet && 'justify-center'
         )}
       >

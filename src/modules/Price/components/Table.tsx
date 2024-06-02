@@ -4,16 +4,20 @@ import Caption from './Caption';
 
 interface TableProps {
   data: TableData;
+  index: number;
   activeTab: number | null;
 }
 
-const Table = ({ data, activeTab }: TableProps) => {
+const Table = ({ data, activeTab, index }: TableProps) => {
   return (
-    <div className=" text-stone-900">
+    <div
+      className={`${
+        activeTab === index ? 'block text-stone-900 animate-scale' : 'hidden'
+      }`}
+    >
       <Caption activeTab={activeTab} />
-
       <table
-        className=" border-collapse border border-stone-900 
+        className="border-collapse border border-stone-900 
     sm:min-w-[288px] text-stone-900 
     md:min-w-[704px]
     xl:min-w-[1152px]"
