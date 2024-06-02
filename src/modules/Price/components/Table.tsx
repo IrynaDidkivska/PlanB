@@ -12,12 +12,12 @@ const Table = ({ data, activeTab, index }: TableProps) => {
   return (
     <div
       className={`${
-        activeTab === index ? 'block tr-accordion text-stone-900' : 'hidden'
+        activeTab === index ? 'block text-stone-900 animate-scale' : 'hidden'
       }`}
     >
       <Caption activeTab={activeTab} />
       <table
-        className=" border-collapse border border-stone-900 
+        className="border-collapse border border-stone-900 
     sm:min-w-[288px] text-stone-900 
     md:min-w-[704px]
     xl:min-w-[1152px]"

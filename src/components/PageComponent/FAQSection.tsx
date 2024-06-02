@@ -33,14 +33,14 @@ export const FAQSection = ({ title, items }: FAQSectionProps) => {
               {item.question}
             </p>
             <p
-              className={`text-lg tr-all
+              className={`text-lg animate-scale
             ${openIndex === index ? 'visible mb-0' : 'hidden'}`}
             >
               {item.answer}
             </p>
             <button
               className={twMerge(
-                `absolute top-0 right-0  w-6 h-6 text-stone-900 tr-all`
+                `absolute top-0 right-0  w-6 h-6 text-stone-900 `
               )}
               type="button"
               onClick={() => toggleAccordion(index)}

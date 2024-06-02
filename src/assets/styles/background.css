@@ -236,16 +236,16 @@
       )
       no-repeat,
     rgba(255, 249, 247, 1);
-  background-size: 50% 70%;
+  background-size: 50% 53%;
   background-position: 90% 100%;
 
   @media only screen and (min-width: 768px) {
-    background-size: 47% 70%;
+    background-size: 47% 65%;
     background-position: 92% 100%;
   }
 
   @media only screen and (min-width: 1440px) {
-    background-size: 40% 70%;
+    background-size: 40% 59%;
     background-position: 83% 100%;
   }
 }

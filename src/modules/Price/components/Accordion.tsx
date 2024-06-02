@@ -21,31 +21,24 @@ export default function Accordion() {
   const [activeTab, setActiveTab] = useState<number | null>(null);
   const [iconStates, setIconStates] = useState<{ [key: number]: boolean }>({});
 
-  const toggleItem = (itemIndex: number) => {
-    if (activeTab === itemIndex) {
-      return setActiveTab(null);
-    }
-    setActiveTab(itemIndex);
+  const handleTabClick = (index: number) => {
+    setActiveTab(activeTab === index ? null : index);
+
+    setIconStates(prevStates => ({
+      ...prevStates,
+      [index]: !prevStates[index],
+    }));
+
+    Object.keys(iconStates).forEach(key => {
+      const tabKey = parseInt(key);
+      if (tabKey !== index && iconStates[tabKey]) {
+        setIconStates(prevStates => ({
+          ...prevStates,
+          [tabKey]: false,
+        }));
+      }
+    });
   };
-
-  // const handleTabClick = (index: number) => {
-  //   setActiveTab(activeTab === index ? null : index);
-
-  //   setIconStates(prevStates => ({
-  //     ...prevStates,
-  //     [index]: !prevStates[index],
-  //   }));
-
-  //   Object.keys(iconStates).forEach(key => {
-  //     const tabKey = parseInt(key);
-  //     if (tabKey !== index && iconStates[tabKey]) {
-  //       setIconStates(prevStates => ({
-  //         ...prevStates,
-  //         [tabKey]: false,
-  //       }));
-  //     }
-  //   });
-  // };
 
   return (
     <>
@@ -58,8 +51,8 @@ export default function Accordion() {
               </h3>
               <button
                 className="flex justify-center items-center w-[43px] h-[72px] md:w-[50px] md:h-[72px] px-1 md:px-2"
-                // onClick={() => handleTabClick(index)}
-                onClick={() => toggleItem(index)}
+                onClick={() => handleTabClick(index)}
+                // onClick={() => toggleItem(index)}
               >
                 <SpriteSVG
                   name={
@@ -70,6 +63,7 @@ export default function Accordion() {
               </button>
             </div>
             <DottedLine />
+
             <Table
               data={dataMapping[index]}
               activeTab={activeTab}
