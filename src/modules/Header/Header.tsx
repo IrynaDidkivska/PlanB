@@ -17,7 +17,7 @@ const Header = () => {
     <>
       <header
         ref={headerRef}
-        className={`top-0 left-0 bg-stone-50 sticky text-stone-900 bg-header px-4 md:px-8 pt-6 md:pt-8  pb-4 md:pb-6 z-50 
+        className={`top-0 left-0 bg-stone-50 sticky text-stone-900 bg-header px-4 md:px-8 pt-6 md:pt-8  pb-4 md:pb-6 z-50
         xl:px-36 xl:pt-8 xl:pb-4 xl:relative 
        `}
       >

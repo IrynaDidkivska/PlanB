@@ -24,6 +24,7 @@ export const SocialMedia = ({ isOnMobile, isFooter }: HeaderProps) => {
               href={el.href}
               target="_blank"
               className={twMerge('w-6 xl:w-8 tr-all ')}
+              aria-label={el.name}
             >
               <SpriteSVG
                 name={el.name}

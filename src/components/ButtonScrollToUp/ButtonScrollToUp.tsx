@@ -1,11 +1,10 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { useVisibility } from '@/hooks/index';
 import { SpriteSVG } from '@/assets/img/SpriteSVG';
 
 const ButtonScrollToUp = () => {
-  const isVisible = useVisibility();
+  const [isVisible, setIsVisible] = useState(false);
 
   const scrollToTop = () => {
     isVisible &&
@@ -14,6 +13,27 @@ const ButtonScrollToUp = () => {
         behavior: 'smooth',
       });
   };
+
+  useEffect(() => {
+    let isScrolling: NodeJS.Timeout | null;
+
+    const handleScroll = () => {
+      if (isScrolling) {
+        clearTimeout(isScrolling);
+      }
+      setIsVisible(true);
+      isScrolling = setTimeout(() => {
+        setIsVisible(false);
+      }, 600);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <button
       onClick={scrollToTop}

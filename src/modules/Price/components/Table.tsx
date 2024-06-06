@@ -18,25 +18,29 @@ const Table = ({ data, activeTab, index }: TableProps) => {
       <Caption activeTab={activeTab} />
       <table
         className="border-collapse border border-stone-900 
-    sm:min-w-[288px] text-stone-900 
-    md:min-w-[704px]
-    xl:min-w-[1152px]"
+sm:min-w-[288px] text-stone-900 
+md:min-w-[704px]
+xl:min-w-[1152px]"
       >
         {data.services
           .filter(category => category.category !== null)
           .map((category, index) => (
             <React.Fragment key={index}>
-              <thead key={index}>
-                <tr className="sm:text-base md:text-2xl font-medium uppercase  bg-rose-200 bg-opacity-60">
-                  <th className="sm:py-2 sm:pl-1.5 md:pl-2 pr-0 pl-3 py-4 border border-stone-900  font-medium tracking-[-0.50px] subpixel-antialiased">
+              <tbody className="border-neutral-800 ">
+                <tr className="sm:text-base md:text-2xl font-medium uppercase bg-rose-200 bg-opacity-60">
+                  <th
+                    scope="col"
+                    className="sm:py-2 sm:pl-1.5 md:pl-2 pr-0 pl-3 py-4 border border-stone-900  font-medium tracking-[-0.50px] subpixel-antialiased"
+                  >
                     {category.category}
                   </th>
-                  <th className="sm:py-5 sm:px-[14.5px] py-4 px-[21.5px] md:w-[146px] border border-stone-900 font-medium text-center subpixel-antialiased">
+                  <th
+                    scope="col"
+                    className="sm:py-5 sm:px-[14.5px] py-4 px-[21.5px] md:w-[146px] border border-stone-900 font-medium text-center subpixel-antialiased"
+                  >
                     Вартість
                   </th>
                 </tr>
-              </thead>
-              <tbody className="border-neutral-800 ">
                 {category.items.map((item, idx) => (
                   <tr
                     key={idx}

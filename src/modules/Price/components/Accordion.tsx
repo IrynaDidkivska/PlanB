@@ -52,7 +52,10 @@ export default function Accordion() {
               <button
                 className="flex justify-center items-center w-[43px] h-[72px] md:w-[50px] md:h-[72px] px-1 md:px-2"
                 onClick={() => handleTabClick(index)}
-                // onClick={() => toggleItem(index)}
+                type="button"
+                aria-label={
+                  iconStates[index] ? 'Close accordion' : 'Open accordion'
+                }
               >
                 <SpriteSVG
                   name={

@@ -58,16 +58,19 @@ export default function PhotoSlider({ sliderData }: SliderComponentProps) {
       >
         {sliderData.map((slide, index) => (
           <SwiperSlide key={index}>
-              <Image alt={slide.alt} src={slide.path} fill={true} />
+            <Image alt={slide.alt} src={slide.path} fill={true} />
           </SwiperSlide>
         ))}
 
         <div className="flex items-center justify-center w-full gap-4 md:gap-5 relative">
-          <button className="photoSwiper-button-prev">
+          <button className="photoSwiper-button-prev" type="button">
             <SpriteSVG width="134" name="arrow" />
           </button>
 
-          <button className={twMerge(`photoSwiper-button-next`, `rotate-180`)}>
+          <button
+            className={twMerge(`photoSwiper-button-next`, `rotate-180`)}
+            type="button"
+          >
             <SpriteSVG width="134" name="arrow" />
           </button>
         </div>
