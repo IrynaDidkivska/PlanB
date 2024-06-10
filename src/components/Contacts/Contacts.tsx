@@ -28,13 +28,18 @@ const Contacts = ({
           isOnTablet && 'mb-6',
           isOnMobile && 'mb-0 items-center'
         )}
+        aria-label="Перейти до Гугл карти з локацією салону"
       >
         <div className="p-1 h-full rounded-full bg-transparent tr-all  hover:text-stone-900 hover:bg-red-200 xl:hover:scale-110">
           <SpriteSVG name="marker" className="w-4 h-4" />
         </div>
 
         {isOnMobile ? (
-          <Link href="#footer" onClick={toggleModal}>
+          <Link
+            href="#footer"
+            onClick={toggleModal}
+            aria-label="Перейти до футера сайту"
+          >
             Адреса
           </Link>
         ) : (

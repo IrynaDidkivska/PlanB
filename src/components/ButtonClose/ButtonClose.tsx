@@ -10,6 +10,7 @@ type ButtonCloseProps = {
 const ButtonClose = ({ onClick, className, children }: ButtonCloseProps) => {
   return (
     <button
+      type="button"
       onClick={onClick}
       className={twMerge(
         'absolute block w-6 h-6 top-10 right-4 cursor-pointer rounded-full tr-all hover:scale-110 hover:bg-extraAccent transition-colors hover:text-accent md:right-8',

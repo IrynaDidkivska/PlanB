@@ -56,16 +56,19 @@ export default function SliderComponent({ sliderData }: SliderComponentProps) {
       >
         {sliderData.map((slide, index) => (
           <SwiperSlide key={index}>
-              <p>{slide.description}</p>
+            <p>{slide.description}</p>
           </SwiperSlide>
         ))}
 
         <div className="flex items-center justify-center w-full gap-4 md:gap-5 relative">
-          <button className="mySwiper-button-prev">
+          <button className="mySwiper-button-prev" type="button">
             <SpriteSVG width="134" name="arrow" />
           </button>
 
-          <button className={twMerge(`mySwiper-button-next`, `rotate-180`)}>
+          <button
+            className={twMerge(`mySwiper-button-next`, `rotate-180`)}
+            type="button"
+          >
             <SpriteSVG width="134" name="arrow" />
           </button>
         </div>

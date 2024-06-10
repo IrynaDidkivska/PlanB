@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import links from '../assets/menuLinks.json';
 import { HeaderProps } from '@/interfaces/header';
@@ -35,6 +36,7 @@ export const Nav = ({ isMobile, toggleModal }: NavProps) => {
                 onClick={toggleModal}
                 className={`nav relative font-ttChocolates500 font-medium active:font-bold 
         ${isMobile ? 'after:bg-stone-50' : 'after:bg-stone-900'}`}
+                aria-label={`Перехід до Секції ${el.title} на головній сторінці`}
               >
                 {el.title}
               </Link>

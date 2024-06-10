@@ -1,3 +1,4 @@
+import { transform } from 'lodash';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -56,15 +57,6 @@ const config: Config = {
         up: '0px 1px 2px 0px rgba(226, 197, 187, 0.10), 0px 3px 3px 0px rgba(226, 197, 187, 0.09), 0px 7px 4px 0px rgba(226, 197, 187, 0.05), 0px 12px 5px 0px rgba(226, 197, 187, 0.01), 0px 18px 5px 0px rgba(226, 197, 187, 0.00);',
         price_1: '0px 4px 12px 0px rgba(32, 32, 32, 0.25)',
       },
-    },
-    keyframes: {
-      scale: {
-        '0%': { scale: '0.5' },
-        '100%': { scale: '1' },
-      },
-    },
-    animation: {
-      scale: 'scale 0.3s ease-in-out',
     },
   },
   plugins: [],
