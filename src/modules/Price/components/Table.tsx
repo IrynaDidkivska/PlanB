@@ -5,11 +5,12 @@ import Caption from './Caption';
 interface TableProps {
   data: TableData;
   index: number;
+  className?: string;
 }
 
-const Table = ({ data, index }: TableProps) => {
+const Table = ({ data, index, className }: TableProps) => {
   return (
-    <>
+    <div className="animate-opacity">
       <Caption index={index} />
       <table
         className="border-collapse border border-stone-900 
@@ -63,13 +64,13 @@ xl:min-w-[1152px]"
         .map((category, index) => (
           <React.Fragment key={index}>
             <>
-              <p className="mt-10 sm:mb-6 md:mb-2 sm:text-xl md:text-2xl text-center ">
+              <p className="mt-10 sm:mb-6 md:mb-2 sm:text-xl md:text-2xl text-center text-stone-900  ">
                 Процедура катафарезу{' '}
                 <span className="sm:block md:inline uppercase">
                   <strong>в подарунок</strong>
                 </span>
               </p>
-              <p className="mb-10 sm:text-xl md:text-2xl text-center">
+              <p className="mb-10 sm:text-xl md:text-2xl text-center text-stone-900 ">
                 Процедура тривалістю до 30 хв, оплачується як 30 хв.
               </p>
             </>
@@ -98,7 +99,7 @@ xl:min-w-[1152px]"
             </table>
           </React.Fragment>
         ))}
-    </>
+    </div>
   );
 };
 export default Table;

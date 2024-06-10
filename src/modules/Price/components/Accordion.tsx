@@ -22,11 +22,10 @@ export default function Accordion() {
       <ul className="flex flex-col gap-16">
         {accordionHeaderData.map((item: string, index: number) => (
           <li key={index}>
-            <details className="flex justify-between items-center">
+            <details className="flex justify-between items-center pointer">
               <summary
                 className="relative pt-4 text-2xl md:text-[40px] leading-none text-stone-900 list-none outline-none
-              before:absolute before:top-1/2 before:right-0 before:content-[''] md:before:w-[38px] before:h-[4px] before:bg-stone-900
-              sm:before:w-[38px]"
+              before:absolute before:top-1/2 before:right-0 before:content-[''] md:before:w-[38px] before:h-[4px] before:bg-stone-900"
               >
                 {item}
                 <DottedLine />
