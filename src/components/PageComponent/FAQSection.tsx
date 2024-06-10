@@ -24,23 +24,25 @@ export const FAQSection = ({ title, items }: FAQSectionProps) => {
       <Subtitle className="mt-24 text-stone-900 ">{title}</Subtitle>
       <ul className="xl:w-1/2">
         {items.map((item, index) => (
-          <li key={index}>
+          <li key={index} className="relative">
             <button
-              className={`relative mb-4 flex justify-between w-11/12  text-stone-900 text-xl font-medium text-left`}
+              className={`flex justify-between w-11/12  text-stone-900 text-xl font-medium text-left subpixel-antialiased
+               ${openIndex === index ? ' mb-1 ' : ' mb-4 '}`}
               type="button"
               onClick={() => toggleAccordion(index)}
             >
               {item.question}
               <SpriteSVG
                 name="chevron"
-                className={`absolute sm:right-[-10%] md:right-[-9%] xl:right-0 w-6 h-6
+                className={`absolute top-0 right-0 w-6 h-6
                 ${openIndex === index ? 'rotate-0' : 'rotate-180'}`}
               />
             </button>
+
             <div
-              className={`mb-1 grid overflow-hidden tr-accordion text-lg ${
+              className={`grid overflow-hidden tr-accordion text-lg ${
                 openIndex === index
-                  ? 'grid-rows-[1fr] opacity-100'
+                  ? 'grid-rows-[1fr] opacity-100 mb-4 '
                   : 'grid-rows-[0fr] opacity-0'
               }`}
             >

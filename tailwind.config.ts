@@ -58,22 +58,6 @@ const config: Config = {
         price_1: '0px 4px 12px 0px rgba(32, 32, 32, 0.25)',
       },
     },
-    keyframes: {
-      opacity: {
-        '0%': {
-          opacity: '0',
-          transform: 'translateY(10%)',
-        },
-        '100%': {
-          opacity: '1',
-          transform: 'translateY(0%)',
-        },
-      },
-    },
-    animation: {
-      opacity: 'opacity 1.3s ease-in-out forwards',
-      transform: 'transform 1.3s ease-in-out forwards',
-    },
   },
   plugins: [],
 };

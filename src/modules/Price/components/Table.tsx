@@ -10,7 +10,7 @@ interface TableProps {
 
 const Table = ({ data, index, className }: TableProps) => {
   return (
-    <div className="animate-opacity">
+    <div className="overflow-hidden">
       <Caption index={index} />
       <table
         className="border-collapse border border-stone-900 
