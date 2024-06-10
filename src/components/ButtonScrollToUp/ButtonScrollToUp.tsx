@@ -24,7 +24,7 @@ const ButtonScrollToUp = () => {
       setIsVisible(true);
       isScrolling = setTimeout(() => {
         setIsVisible(false);
-      }, 600);
+      }, 2000);
     };
 
     window.addEventListener('scroll', handleScroll);

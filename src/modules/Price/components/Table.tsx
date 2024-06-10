@@ -5,17 +5,12 @@ import Caption from './Caption';
 interface TableProps {
   data: TableData;
   index: number;
-  activeTab: number | null;
 }
 
-const Table = ({ data, activeTab, index }: TableProps) => {
+const Table = ({ data, index }: TableProps) => {
   return (
-    <div
-      className={`${
-        activeTab === index ? 'block text-stone-900 animate-scale' : 'hidden'
-      }`}
-    >
-      <Caption activeTab={activeTab} />
+    <>
+      <Caption index={index} />
       <table
         className="border-collapse border border-stone-900 
 sm:min-w-[288px] text-stone-900 
@@ -103,7 +98,7 @@ xl:min-w-[1152px]"
             </table>
           </React.Fragment>
         ))}
-    </div>
+    </>
   );
 };
 export default Table;

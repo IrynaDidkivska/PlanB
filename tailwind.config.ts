@@ -57,15 +57,6 @@ const config: Config = {
         price_1: '0px 4px 12px 0px rgba(32, 32, 32, 0.25)',
       },
     },
-    keyframes: {
-      scale: {
-        '0%': { scale: '0.5' },
-        '100%': { scale: '1' },
-      },
-    },
-    animation: {
-      scale: 'scale 0.3s ease-in-out',
-    },
   },
   plugins: [],
 };

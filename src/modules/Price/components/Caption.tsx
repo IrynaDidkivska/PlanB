@@ -2,13 +2,13 @@ import React from 'react';
 import caption from '../data/caption.json';
 
 interface CaptionProps {
-  activeTab: number | null;
+  index: number;
 }
 
-const Caption = ({ activeTab }: CaptionProps) => {
+const Caption = ({ index }: CaptionProps) => {
   return (
-    <div className="sm:mt-14 md:mt-20 mb-10 sm:text-xl md:text-2xl text-center">
-      {activeTab === 0 && (
+    <div className="sm:mt-14 md:mt-20 mb-10 sm:text-xl md:text-2xl block text-stone-900 text-center">
+      {index === 0 && (
         <>
           <p className="sm:mb-3 md:mb-2 font-medium">
             На першу процедуру <strong>ЗНИЖКА 20%</strong>
@@ -20,7 +20,7 @@ const Caption = ({ activeTab }: CaptionProps) => {
         </>
       )}
 
-      {activeTab === 1 && (
+      {index === 1 && (
         <>
           <h2 className="sm:mb-5 md:mb-2 font-bold  uppercase">
             Пакетні пропозиції
@@ -44,7 +44,7 @@ const Caption = ({ activeTab }: CaptionProps) => {
         </>
       )}
 
-      {activeTab === 2 && ''}
+      {index === 2 && ''}
     </div>
   );
 };

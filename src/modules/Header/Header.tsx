@@ -25,7 +25,7 @@ const Header = () => {
           <button
             onClick={() => setIsOpen(true)}
             type="button"
-            aria-label="burger"
+            aria-label="Навігаційне меню на головній сторінці"
             className="w-10 h-10  md:w-16 md:h-16 xl:hidden"
           >
             <SpriteSVG name="burger_menu" />
