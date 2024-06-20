@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import links from '../assets/menuLinks.json';
 import { HeaderProps } from '@/interfaces/header';
@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 interface NavProps extends HeaderProps {
   isMobile: boolean;
 }
+//TODO Зробити плавний скрол на якірні посилання з інших сторінок
 
 export const Nav = ({ isMobile, toggleModal }: NavProps) => {
   const pathname = usePathname();

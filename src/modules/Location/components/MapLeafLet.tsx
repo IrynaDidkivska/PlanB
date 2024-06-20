@@ -1,18 +1,15 @@
 'use client';
 import React from 'react';
-import { Icon } from 'leaflet';
-import { MapContainer, Marker, TileLayer, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
+import { FloatingMarker } from './FloatingMarker';
+
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
-import Contacts from '@/components/Contacts/Contacts';
 
-const MapLeafLet = () => {
+export const MapLeafLet = () => {
   const position: [number, number] = [48.6817, 26.58439];
-  const customIcon = new Icon({
-    iconUrl: './pin@3x.png',
-    iconSize: [40, 64],
-  });
+
   return (
     <div className="h-[600px]">
       <MapContainer
@@ -26,14 +23,10 @@ const MapLeafLet = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           className="map-tiles"
         />
-        <Marker position={position} icon={customIcon}>
-          <Popup>
-            <Contacts />
-          </Popup>
-        </Marker>
-        <a href="/">на головну</a>
+        <FloatingMarker position={position} />
       </MapContainer>
     </div>
   );
 };
+
 export default MapLeafLet;

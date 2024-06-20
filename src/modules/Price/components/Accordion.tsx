@@ -16,12 +16,13 @@ const dataMapping: { [key: number]: TableData } = {
 
 const accordionHeaderData = [LASER, ELECTRO, SUGARING];
 
-export default function Accordion() {
+export default function Accordion({}) {
   const [isAccordionOpen, setIsAccordionOpen] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
     setIsAccordionOpen(isAccordionOpen === index ? null : index);
   };
+
   return (
     <>
       <ul className="flex flex-col gap-16">
@@ -31,7 +32,7 @@ export default function Accordion() {
               className={`flex justify-between items-center w-full tr-accordion
             relative text-2xl md:text-[40px] leading-none text-stone-900 list-none outline-none
             before:absolute before:top-1/2 before:right-0 before:content-[''] before:w-[38px] before:h-[4px] before:bg-stone-900
-            after:absolute after:top-0 sm:after:right-[6%] md:after:right-[2.5%] xl:after:right-[1.5%] after:content-[''] after:w-[4px] after:h-[38px] after:bg-stone-900  after:translate-y-[10%]
+            after:absolute  sm:after:top-[-35%] md:after:top-0 sm:after:right-[6%] md:after:right-[2.5%] xl:after:right-[1.5%] after:content-[''] after:w-[4px] after:h-[38px] after:bg-stone-900  after:translate-y-[10%]
            ${
              isAccordionOpen === index
                ? 'after:opacity-0 after:h-0 after:bottom-0'
