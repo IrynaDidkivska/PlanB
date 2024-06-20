@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 const Location = () => {
   const DynamicMapLeafLet = useMemo(
     () =>
-      dynamic(() => import('@/modules/Location/MapLeaflet'), {
+      dynamic(() => import('@/modules/Location/components/MapLeafLet'), {
         loading: () => <p>A map is loading</p>,
         ssr: false,
       }),
