@@ -10,6 +10,9 @@ import 'swiper/css/pagination';
 
 import SpriteSVG from '../img/SpriteSVG';
 import { twMerge } from 'tailwind-merge';
+import Modal from '@/components/Modal/Modal';
+import { useState } from 'react';
+import ButtonAppointment from '@/components/ButtonAppointment/ButtonAppointment';
 
 type Slide = {
   description: string;
@@ -20,8 +23,11 @@ type SliderComponentProps = {
 };
 
 export default function SliderComponent({ sliderData }: SliderComponentProps) {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [description, setDescription] = useState<string | null>(null);
+  const toggleModal = () => setIsOpen(prev => !prev);
   return (
-    <>
+    <div>
       <Swiper
         cssMode={true}
         grabCursor={true}
@@ -55,7 +61,14 @@ export default function SliderComponent({ sliderData }: SliderComponentProps) {
         className="feedbackSwiper"
       >
         {sliderData.map((slide, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide
+            style={{ cursor: 'pointer' }}
+            key={index}
+            onClick={() => {
+              toggleModal();
+              setDescription(slide.description);
+            }}
+          >
             <p>{slide.description}</p>
           </SwiperSlide>
         ))}
@@ -73,6 +86,24 @@ export default function SliderComponent({ sliderData }: SliderComponentProps) {
           </button>
         </div>
       </Swiper>
-    </>
+      <Modal
+        isOpen={isOpen}
+        onClose={toggleModal}
+        closeBtnClassName="top-2 right-2 md:top-2 md:right-2"
+        contentClassName="flex items-center justify-center flex-col max-h-[90vh] md:py-10"
+      >
+        <div className="swiper-slide-modal">
+          <div className="swiper-slide-modal_img"></div>
+          <p>{description}</p>
+        </div>
+        <ButtonAppointment
+          onClick={toggleModal}
+          type="button"
+          className={'w-[200px] min-w-0 mx-auto mt-5 md:min-w-0'}
+        >
+          OK
+        </ButtonAppointment>
+      </Modal>
+    </div>
   );
 }
