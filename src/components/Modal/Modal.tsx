@@ -43,8 +43,10 @@ const Modal: React.FC<ModalProps> = props => {
     contentClassName,
     backdropClassName,
   } = props;
-
-  const modalRoot: Element | null = document.querySelector('#modal-root');
+  const [modalRoot, setModalRoot] = React.useState<Element | null>(null);
+  useEffect(() => {
+    setModalRoot(document.querySelector('#modal-root'));
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {

@@ -17,24 +17,27 @@ const dataMapping: { [key: number]: TableData } = {
 const accordionHeaderData = [LASER, ELECTRO, SUGARING];
 
 export default function Accordion({}) {
-  const [isAccordionOpen, setIsAccordionOpen] = useState<number | null>(null);
+  const [isAccordionOpen, setIsAccordionOpen] = useState<number[]>([]);
 
   const toggleAccordion = (index: number) => {
-    setIsAccordionOpen(isAccordionOpen === index ? null : index);
+    setIsAccordionOpen(isAccordionOpen.includes(index) 
+    ? isAccordionOpen.filter(el=>el !== index) 
+    : [...isAccordionOpen, index] 
+  );
   };
 
   return (
     <>
       <ul className="flex flex-col gap-16">
         {accordionHeaderData.map((item: string, index: number) => (
-          <li key={index} className="pt-4 cursor-pointer">
+          <li key={index} className="pt-4">
             <button
-              className={`flex justify-between items-center w-full tr-accordion
+              className={`flex cursor-pointer justify-between items-center w-full tr-accordion
             relative text-2xl md:text-[40px] leading-none text-stone-900 list-none outline-none
             before:absolute before:top-1/2 before:right-0 before:content-[''] before:w-[38px] before:h-[4px] before:bg-stone-900
             after:absolute  sm:after:top-[-35%] md:after:top-0 sm:after:right-[6%] md:after:right-[2.5%] xl:after:right-[1.5%] after:content-[''] after:w-[4px] after:h-[38px] after:bg-stone-900  after:translate-y-[10%]
            ${
-             isAccordionOpen === index
+            isAccordionOpen.includes(index)
                ? 'after:opacity-0 after:h-0 after:bottom-0'
                : 'after:opacity-100'
            }`}
@@ -45,7 +48,7 @@ export default function Accordion({}) {
             <DottedLine />
             <div
               className={`grid overflow-hidden tr-accordion ${
-                isAccordionOpen === index
+                isAccordionOpen.includes(index)
                   ? 'grid-rows-[1fr] opacity-100'
                   : 'grid-rows-[0fr] opacity-0'
               }`}
